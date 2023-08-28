@@ -35,7 +35,7 @@
                     <div class="header-nav">
                         <div class="header-currency">
                             <div class="header-currency_top">
-                                <div class="header-currency_input">
+                                <div class="header-currency_input usd">
                                     <input type="number" min="0" class="header-currency_first">
                                     <span>
                                         <img class="header-currency_flag" src="https://flagsapi.com/US/flat/32.png">
@@ -45,8 +45,10 @@
                                         </div>
                                     </span>
                                 </div>
-                                <i class="fa-solid fa-arrow-right-arrow-left"></i>
-                                <div class="header-currency_input">
+                                <span class="header-currency_changer">
+                                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                                </span>
+                                <div class="header-currency_input uzs">
                                     <input type="number" min="0" class="header-currency_second">
                                     <span>
                                         <img class="header-currency_flag" src="https://flagsapi.com/UZ/flat/32.png">
@@ -57,9 +59,39 @@
                                     </span>
                                 </div>
                             </div>
-                            <div class="header-currency_bottom"></div>
+                            <div class="header-currency_bottom">
+                                <span class="header-currency_usd">
+                                    1
+                                </span>
+                                AQSH dollar = <span class="header-currency_uzs">12070,10</span> O‘zbek so‘mi
+                            </div>
                         </div>
-                        <div class="header-settings"></div>
+                        <div class="header-settings">
+                            <button class="header-notification_opener header-settings_icon">
+                                <i class="fa-solid fa-bell"></i>
+                                <span class="header-notification_count">10</span>
+                            </button>
+                            <a href="#" class="header-settings_icon">
+                                <i class="fa-solid fa-user"></i>
+                            </a>
+
+                            <div class="header-currency_langs">
+                                <button class="header-currency_current_lang">UZB</button>
+                                <ul class="header-currency_lang_list">
+                                    <li class="header-currency_lang_item">
+                                        <a href="#">RUS</a>
+                                    </li>
+                                    <li class="header-currency_lang_item">
+                                        <a href="#">ENG</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <button>
+                                <i class="fa-solid fa-plus"></i>
+                                To‘lov qo‘shish
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>

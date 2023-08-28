@@ -29,10 +29,6 @@ input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
 }
 
-.header-currency_flag {
-    border-radius: 10px !important;
-}
-
 .header-currency_input {
     border-radius: 10px;
     display: flex;
@@ -57,6 +53,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .header-currency_top {
     display: flex;
+    align-items: center;
     gap: 20px;
 }
 
@@ -70,4 +67,101 @@ input[type=number]::-webkit-outer-spin-button {
 
 .header-currency_arrows i {
     color: var(--color-dark);
+}
+
+.header-currency_input.uzs.changed {
+    transform: translateX(-129%);
+}
+
+.header-currency_input.usd.changed {
+    transform: translateX(129%);
+}
+
+.header-currency_changer {
+    cursor: pointer;
+}
+
+.header-currency_changer.changed {
+    transform: rotate(-180deg);
+}
+
+.header-currency_bottom,
+.header-currency_bottom span {
+    color: var(--color-dark);
+    font-size: var(--size-sm-text);
+}
+
+.header-currency_bottom {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.header-wrapp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo {
+    width: 15%;
+    position: relative;
+}
+
+.header-logo img {
+    width: 100%;
+    max-width: 120px;
+}
+
+.header-nav {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-settings {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-settings_icon {
+    color: var(--color-main);
+    font-size: var(--size-m-d);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.header-notification_count {
+    position: absolute;
+    font-size: 10px;
+    right: 4px;
+    top: 4px;
+    width: 16px;
+    height: 16px;
+    background: var(--color-danger);
+    color: var(--color-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.header-notification_opener {
+    background: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.header-notification_opener.active {
+    background: var(--color-main);
+}
+
+.header-notification_opener.active i {
+    color: var(--color-white);
 }
