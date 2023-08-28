@@ -85,3 +85,15 @@ currency_changer.addEventListener("click", () => {
     prev = currency_changer.previousElementSibling.classList.toggle("changed")
     next = currency_changer.nextElementSibling.classList.toggle("changed")
 })
+
+let currency_current_lang = document.querySelector(".header-currency_current_lang")
+
+currency_current_lang.addEventListener("click", () => {
+    currency_current_lang.classList.toggle("changed")
+    lang_list = currency_current_lang.nextElementSibling
+    if (lang_list.getBoundingClientRect().height) {
+        lang_list.style.maxHeight = `0px`
+    } else {
+        lang_list.style.maxHeight = `${lang_list.scrollHeight}px`
+    }
+})
