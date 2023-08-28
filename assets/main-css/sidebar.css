@@ -12,15 +12,17 @@
 }
 
 .sidebar-logo {
-     width: 175px;
-     height: 85px;
-     padding: 30px 0 12px 30px;
+    width: 180px;
+    height: 90px;
+    padding: 30px 0 12px 30px;
 }
-.sidebar-ul{
+
+.sidebar-ul {
     margin-top: 100px;
     margin-left: 30px;
 }
-.sidebar-ul-li img{
+
+.sidebar-ul-li img {
     width: 40px;
     height: 40px;
     margin-right: 10px;
@@ -29,7 +31,8 @@
 .sidebar-ul-li {
     list-style-type: none;
 }
-.sidebar-ul-li-a{
+
+.sidebar-ul-li-a {
     display: flex;
     align-items: center;
     margin-top: 20px;
@@ -40,9 +43,16 @@
     padding: 5px 0 5px 10px;
     text-decoration: none;
 }
+
 .sidebar-ul-li-a:hover,
 .active{
    background-color: var(--color-main);
    color: var(--color-white);
    border-radius: 10px 0 0 10px;
+}
+.sidebar-ul-li-a i:hover,
+.active {
+    background-color: var(--color-main);
+    color: var(--color-white);
+    border-radius: 10px 0 0 10px;
 }

@@ -10,15 +10,19 @@
     --bg-main: #F8FAFF;
     --main-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     --main-shadow-h: rgba(133, 133, 133, 0.1) 0px 8px 24px;
+    --button-shadow: #1b1f5480;
 }
+
 @font-face {
     font-family: 'Gotham';
     src: url('../fonts/Gotham\ Regular.otf');
 }
+
 @font-face {
     font-family: 'GothamBold';
     src: url('../fonts/GothamBold.otf');
 }
+
 @font-face {
     font-family: 'GothamMedium';
     src: url('../fonts/GothamMedium.otf');
