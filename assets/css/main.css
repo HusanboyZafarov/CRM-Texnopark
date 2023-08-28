@@ -1,10 +1,77 @@
-*{
+@font-face {
+    font-family: 'Primary-R';
+    src: url('../fonts/GothamRegular.otf');
+}
+
+@font-face {
+    font-family: 'Primary-M';
+    src: url('../fonts/GothamMedium.otf');
+}
+
+@font-face {
+    font-family: 'Primary-B';
+    src: url('../fonts/GothamBold.otf');
+}
+
+:root {
+    --color-main: #1B1F54;
+    --color-white: #FFF;
+    --color-dark: #3A3A3A;
+    --color-dark-nonactive: #3A3A3A50;
+    --color-gray: #C4C4C4;
+    --color-warn: #FEEA00;
+    --color-danger: #EF5B5B;
+
+    --size-sm-text: 14px;
+    --size-m-text: 16px;
+    --size-l-text: 18px;
+
+    --size-sm-d: 20px;
+    --size-m-d: 22px;
+    --size-l-d: 24px;
+
+    --size-sm-h: 28px;
+    --size-m-h: 30px;
+    --size-l-h: 40px;
+
+    --bg-main: #F8FAFF;
+    --main-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    --main-shadow-h: rgba(133, 133, 133, 0.1) 0px 8px 24px;
+}
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    transition: all 0.5s ease;
+    font-family: 'Primary-M';
 }
 
-.sidebar{
+.sidebar {
     width: 300px;
     height: 100vh;
+}
+
+.container {
+    max-width: 100%;
+    padding: 0 4%;
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b,
+strong {
+    font-family: 'Primary-B';
+}
+
+header {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--color-gray);
 }
