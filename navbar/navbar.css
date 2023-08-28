@@ -52,3 +52,53 @@ body {
 .navbar .functions .add-payment:hover {
   box-shadow: 0 3px 5px var(--button-shadow);
 }
+
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+
+.header-currency_flag {
+    border-radius: 10px !important;
+}
+
+.header-currency_input {
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    background: var(--bg-main);
+    border: 1px solid var(--color-gray);
+}
+
+.header-currency_input input {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    width: 120px;
+    outline: none;
+    background: var(--bg-main);
+}
+
+.header-currency_input span {
+    display: flex;
+    align-items: center;
+}
+
+.header-currency_top {
+    display: flex;
+    gap: 20px;
+}
+
+.header-currency_arrows {
+    display: flex;
+    margin: 0 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-currency_arrows i {
+    color: var(--color-dark);
+}
