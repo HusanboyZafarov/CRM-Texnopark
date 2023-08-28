@@ -9,13 +9,14 @@ let uzs = 0
 
 fetch(`https://cbu.uz/uz/arkhiv-kursov-valyut/json/`)
     .then(response => response.json()).then(response => {
-        console.log(response);
-        // uzs = response.data.UZS.value
-        // rub = response.data.RUB.value
-        // usd = response.data.USD.value
+        // console.log(response[0]); // Dollar
+        // console.log(response[1]); // Yevro
+        // console.log(response[2]); // Rubl
+        uzs = response[0].Rate
+        usd = 1
 
-        // currency_second.value = uzs.toFixed(2)
-        // currency_first.value = usd
+        currency_second.value = Number(uzs).toFixed(2)
+        currency_first.value = usd
     }).catch(() => {});
 
 currency_incr.forEach(incr => {
@@ -23,6 +24,7 @@ currency_incr.forEach(incr => {
 
     incr.addEventListener("click", () => {
         if (incr.classList[1] == "uz") {
+
             input.value = Number(Number(input.value) + 1000).toFixed(2)
             currency_first.value = Number(input.value / uzs).toFixed(2)
         } else {
@@ -41,6 +43,8 @@ currency_decr.forEach(decr => {
                 input.value = Number(Number(input.value) - 1000).toFixed(2)
                 currency_first.value = Number(input.value / uzs).toFixed(2)
             }
+            input.value <= 1000 ? input.value = 0 : input.value;
+            input.value <= 1000 ? currency_first.value = 0 : currency_first.value;
         } else {
             if (input.value >= 1) {
                 input.value = Number(Number(input.value) - 1).toFixed(2)
@@ -49,8 +53,6 @@ currency_decr.forEach(decr => {
         }
     })
 });
-
-
 
 currency_first.addEventListener("keyup", (e) => {
     if (e.key != "-" || e.key != "+") {
