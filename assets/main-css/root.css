@@ -2,9 +2,12 @@
     --color-main: #1B1F54;
     --color-white: #FFF;
     --color-dark: #3A3A3A;
+    --color-dark-nonactive: #3A3A3A50;
     --color-gray: #C4C4C4;
     --color-warn: #FEEA00;
     --color-danger: #EF5B5B;
 
     --bg-main: #F8FAFF;
+    --main-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    --main-shadow-h: rgba(133, 133, 133, 0.1) 0px 8px 24px;
 }
