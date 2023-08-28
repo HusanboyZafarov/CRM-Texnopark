@@ -45,6 +45,11 @@
 }
 
 .sidebar-ul-li-a:hover,
+.active{
+   background-color: var(--color-main);
+   color: var(--color-white);
+   border-radius: 10px 0 0 10px;
+}
 .sidebar-ul-li-a i:hover,
 .active {
     background-color: var(--color-main);
