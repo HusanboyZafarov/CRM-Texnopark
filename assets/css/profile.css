@@ -1,0 +1,73 @@
+:root {
+    --color-main: #1B1F54;
+    --color-white: #FFF;
+    --color-dark: #3A3A3A;
+    --color-dark-nonactive: #3A3A3A50;
+    --color-gray: #C4C4C4;
+    --color-warn: #FEEA00;
+    --color-danger: #EF5B5B;
+
+    --size-sm-text: 14px;
+    --size-m-text: 16px;
+    --size-l-text: 18px;
+
+    --size-sm-d: 20px;
+    --size-m-d: 22px;
+    --size-l-d: 24px;
+
+    --size-sm-h: 28px;
+    --size-m-h: 30px;
+    --size-l-h: 40px;
+
+    --bg-main: #F8FAFF;
+    --main-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    --main-shadow-h: rgba(133, 133, 133, 0.1) 0px 8px 24px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+.header-currency_flag {
+    border-radius: 10px !important;
+}
+
+.header-currency_input {
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    background: var(--bg-main);
+    border: 1px solid var(--color-gray);
+}
+
+.header-currency_input input {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    width: 120px;
+    outline: none;
+    background: var(--bg-main);
+}
+
+.header-currency_input span {
+    display: flex;
+    align-items: center;
+}
+
+.header-currency_top {
+    display: flex;
+    gap: 20px;
+}
+
+.header-currency_arrows {
+    display: flex;
+    margin: 0 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-currency_arrows i {
+    color: var(--color-dark);
+}

@@ -19,6 +19,8 @@
     <!-- Links -->
     <link rel="stylesheet" href="../assets/main-css/root.css">
     <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/profile.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css">
     <title>Profile - Husanboy Zafarov</title>
 </head>
 
@@ -32,7 +34,30 @@
                     </div>
                     <div class="header-nav">
                         <div class="header-currency">
-                            <img class="header-flag" src="https://flagsapi.com/RU/flat/64.png">
+                            <div class="header-currency_top">
+                                <div class="header-currency_input">
+                                    <input type="number" min="0" class="header-currency_first">
+                                    <span>
+                                        <img class="header-currency_flag" src="https://flagsapi.com/US/flat/32.png">
+                                        <div class="header-currency_arrows">
+                                            <i class="fa-solid header-currency_incr fa-caret-up"></i>
+                                            <i class="fa-solid header-currency_decr fa-caret-down"></i>
+                                        </div>
+                                    </span>
+                                </div>
+                                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                                <div class="header-currency_input">
+                                    <input type="number" min="0" class="header-currency_second">
+                                    <span>
+                                        <img class="header-currency_flag" src="https://flagsapi.com/UZ/flat/32.png">
+                                        <div class="header-currency_arrows">
+                                            <i class="fa-solid uz header-currency_incr fa-caret-up"></i>
+                                            <i class="fa-solid uz header-currency_decr fa-caret-down"></i>
+                                        </div>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="header-currency_bottom"></div>
                         </div>
                         <div class="header-settings"></div>
                     </div>
@@ -40,9 +65,11 @@
             </div>
         </div>
     </header>
+
     <main>
 
     </main>
 </body>
+<script src="./assets/js/profile.js"></script>
 
 </html>
