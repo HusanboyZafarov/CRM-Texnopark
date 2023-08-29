@@ -3,7 +3,12 @@ let currency_incr = document.querySelectorAll(".header-currency_incr"),
     currency_first = document.querySelector(".header-currency_first"),
     currency_second = document.querySelector(".header-currency_second"),
     currency_usd = document.querySelector(".header-currency_usd"),
-    currency_uzs = document.querySelector(".header-currency_uzs")
+    currency_uzs = document.querySelector(".header-currency_uzs"),
+    notification_opener = document.querySelector(".header-notification_opener"),
+    notification_closer = document.querySelector(".header-notification_closer"),
+    notification_wrapp = document.querySelector('.header-notification_wrapp'),
+    currency_changer = document.querySelector(".header-currency_changer"),
+    currency_current_lang = document.querySelector(".header-currency_current_lang")
 
 let rub = 0
 let usd = 0
@@ -79,21 +84,34 @@ currency_second.addEventListener("keyup", (e) => {
     }
 })
 
-let currency_changer = document.querySelector(".header-currency_changer")
+
 currency_changer.addEventListener("click", () => {
     currency_changer.classList.toggle("changed")
     prev = currency_changer.previousElementSibling.classList.toggle("changed")
     next = currency_changer.nextElementSibling.classList.toggle("changed")
 })
 
-let currency_current_lang = document.querySelector(".header-currency_current_lang")
 
 currency_current_lang.addEventListener("click", () => {
     currency_current_lang.classList.toggle("changed")
     lang_list = currency_current_lang.nextElementSibling
-    if (lang_list.getBoundingClientRect().height) {
-        lang_list.style.maxHeight = `0px`
-    } else {
-        lang_list.style.maxHeight = `${lang_list.scrollHeight}px`
-    }
+    lang_list.getBoundingClientRect().height ? lang_list.style.maxHeight = `0px` : lang_list.style.maxHeight = `${lang_list.scrollHeight}px`
+})
+
+notification_opener.addEventListener("click", () => {
+    notification_wrapp.classList.toggle("opened")
+    notification_wrapp.style.width = `${notification_opener.parentElement.getBoundingClientRect().width + (notification_opener.parentElement.getBoundingClientRect().width / 2)}px`
+    notification_opener.parentElement.classList.toggle("changed")
+})
+
+notification_closer.addEventListener("click", () => {
+    notification_wrapp.classList.remove("opened")
+    notification_opener.parentElement.classList.remove("changed")
+})
+
+let notification_toggler = document.querySelector(".header-notification_toggler"),
+    notification_list = document.querySelector(".header-notification_list")
+
+notification_toggler.addEventListener("click", () => {
+    notification_list.getBoundingClientRect().height ? notification_list.style.maxHeight = 0 : notification_list.style.maxHeight = `${notification_list.scrollHeight}px`
 })

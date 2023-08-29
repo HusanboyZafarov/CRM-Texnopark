@@ -89,7 +89,8 @@ input[type=number]::-webkit-outer-spin-button {
 .header-currency_bottom,
 .header-currency_bottom span {
     color: var(--color-dark);
-    font-size: var(--size-sm-text);
+    font-size: 10px;
+    font-family: 'Primary-R';
 }
 
 .header-currency_bottom {
@@ -114,7 +115,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .header-nav {
-    width: 80%;
+    width: 82%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -126,6 +127,29 @@ input[type=number]::-webkit-outer-spin-button {
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+.header-settings.changed {
+    padding-right: 50px;
+}
+
+.header-notification_closer {
+    position: fixed;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--color-main);
+    right: -400px;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-white);
+    cursor: pointer;
+}
+
+.header-settings.changed .header-notification_closer {
+    right: calc(4%);
 }
 
 .header-settings_icon {
@@ -244,9 +268,13 @@ input[type=number]::-webkit-outer-spin-button {
     width: 30%;
     background: var(--bg-main);
     top: 0;
-    right: 0;
+    right: -30%;
     padding: 105px 10px 10px 10px;
     box-shadow: var(--main-shadow);
+}
+
+.header-notification_wrapp.opened {
+    right: 0;
 }
 
 .header-notification_group {
@@ -258,7 +286,6 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 
-/* width */
 .header-notification_group::-webkit-scrollbar {
     width: 8px;
 }
@@ -267,13 +294,11 @@ input[type=number]::-webkit-outer-spin-button {
     border-radius: 10px;
 }
 
-/* Handle */
 .header-notification_group::-webkit-scrollbar-thumb {
     background: var(--color-main);
     border-radius: 10px;
 }
 
-/* Handle on hover */
 .header-notification_group::-webkit-scrollbar-thumb:hover {
     background: var(--color-dark);
 }
@@ -312,4 +337,17 @@ input[type=number]::-webkit-outer-spin-button {
 .header-notification-info {
     display: flex;
     justify-content: space-between;
+}
+
+.header-notification_toggler.changed {
+    transform: rotate(-180deg);
+}
+
+.header-notification_toggler {
+    cursor: pointer;
+}
+
+.header-notification_list {
+    overflow-y: hidden;
+    max-height: 0;
 }
