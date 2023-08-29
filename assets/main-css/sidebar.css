@@ -22,9 +22,7 @@
     margin-left: 30px;
 }
 
-.sidebar-ul-li img {
-    width: 40px;
-    height: 40px;
+.sidebar-ul-li-a-i {
     margin-right: 10px;
 }
 
@@ -36,8 +34,8 @@
     display: flex;
     align-items: center;
     margin-top: 20px;
+    font-family: 'Primary-B';
     width: 100%;
-    font-family: 'GothamMedium';
     font-size: 30px;
     color: var(--color-main);
     padding: 5px 0 5px 10px;
@@ -49,10 +47,4 @@
    background-color: var(--color-main);
    color: var(--color-white);
    border-radius: 10px 0 0 10px;
-}
-.sidebar-ul-li-a i:hover,
-.active {
-    background-color: var(--color-main);
-    color: var(--color-white);
-    border-radius: 10px 0 0 10px;
 }
