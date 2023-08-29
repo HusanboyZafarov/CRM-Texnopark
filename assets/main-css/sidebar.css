@@ -34,8 +34,8 @@
     display: flex;
     align-items: center;
     margin-top: 20px;
+    font-family: 'Primary-B';
     width: 100%;
-    font-family: 'GothamMedium';
     font-size: 30px;
     color: var(--color-main);
     padding: 5px 0 5px 10px;

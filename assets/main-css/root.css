@@ -7,23 +7,35 @@
     --color-warn: #FEEA00;
     --color-danger: #EF5B5B;
 
-    --bg-main: #F8FAFF;
+    --size-sm-text: 14px;
+    --size-m-text: 16px;
+    --size-l-text: 18px;
+
+    --size-sm-d: 20px;
+    --size-m-d: 22px;
+    --size-l-d: 24px;
+
+    --size-sm-h: 28px;
+    --size-m-h: 30px;
+    --size-l-h: 40px;
+
+    /* --bg-main: #F8FAFF; */
+    --bg-main: #cdd8f5;
     --main-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     --main-shadow-h: rgba(133, 133, 133, 0.1) 0px 8px 24px;
-    --button-shadow: #1b1f5480;
 }
 
 @font-face {
-    font-family: 'Gotham';
-    src: url('../fonts/Gotham\ Regular.otf');
+    font-family: 'Primary-R';
+    src: url('../fonts/GothamRegular.otf');
 }
 
 @font-face {
-    font-family: 'GothamBold';
-    src: url('../fonts/GothamBold.otf');
-}
-
-@font-face {
-    font-family: 'GothamMedium';
+    font-family: 'Primary-M';
     src: url('../fonts/GothamMedium.otf');
+}
+
+@font-face {
+    font-family: 'Primary-B';
+    src: url('../fonts/GothamBold.otf');
 }
