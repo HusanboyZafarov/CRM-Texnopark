@@ -268,9 +268,27 @@ input[type=number]::-webkit-outer-spin-button {
     width: 30%;
     background: var(--bg-main);
     top: 0;
-    right: -30%;
+    right: -100%;
+    overflow-y: scroll;
     padding: 105px 10px 10px 10px;
     box-shadow: var(--main-shadow);
+}
+
+.header-notification_wrapp::before {
+    position: fixed;
+    display: block;
+    content: "";
+    width: inherit;
+    height: 101px;
+    background: var(--bg-main);
+    top: 0;
+    right: -100%;
+    transition: all 0.5s ease;
+    z-index: 100;
+}
+
+.header-notification_wrapp.opened::before {
+    right: 0;
 }
 
 .header-notification_wrapp.opened {
@@ -282,9 +300,9 @@ input[type=number]::-webkit-outer-spin-button {
     border-radius: 10px;
     position: relative;
     max-height: 300px;
+    margin-bottom: 10px;
     overflow-y: scroll;
 }
-
 
 .header-notification_group::-webkit-scrollbar {
     width: 8px;

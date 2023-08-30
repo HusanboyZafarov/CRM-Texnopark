@@ -100,7 +100,10 @@ currency_current_lang.addEventListener("click", () => {
 
 notification_opener.addEventListener("click", () => {
     notification_wrapp.classList.toggle("opened")
-    notification_wrapp.style.width = `${notification_opener.parentElement.getBoundingClientRect().width + (notification_opener.parentElement.getBoundingClientRect().width / 2)}px`
+    let bef = document.querySelector(".header-notification_wrapp::before")
+    notification_wrapp.style.width = `${notification_opener.parentElement.getBoundingClientRect().width *= 1.4}px`
+    bef.style.width = `${notification_opener.parentElement.getBoundingClientRect().width *= 1.4}px`
+    console.log(notification_opener.parentElement.clientRight);
     notification_opener.parentElement.classList.toggle("changed")
 })
 
@@ -109,9 +112,9 @@ notification_closer.addEventListener("click", () => {
     notification_opener.parentElement.classList.remove("changed")
 })
 
-let notification_toggler = document.querySelector(".header-notification_toggler"),
-    notification_list = document.querySelector(".header-notification_list")
-
-notification_toggler.addEventListener("click", () => {
-    notification_list.getBoundingClientRect().height ? notification_list.style.maxHeight = 0 : notification_list.style.maxHeight = `${notification_list.scrollHeight}px`
-})
+let notification_toggler = document.querySelectorAll(".header-notification_toggler")
+notification_toggler.forEach(element => {
+    element.addEventListener("click", () => {
+        element.parentElement.nextElementSibling.getBoundingClientRect().height ? element.parentElement.nextElementSibling.style.maxHeight = 0 : element.parentElement.nextElementSibling.style.maxHeight = `${element.parentElement.nextElementSibling.scrollHeight}px`
+    });
+});
