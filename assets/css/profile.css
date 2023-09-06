@@ -369,3 +369,42 @@ input[type=number]::-webkit-outer-spin-button {
     overflow-y: hidden;
     max-height: 0;
 }
+
+.header-sidebar {
+    position: fixed;
+    padding-top: 205px;
+    padding-left: 3%;
+    width: calc(15% + 41px);
+    top: 0;
+    left: 0;
+    height: 100vh;
+    border-right: 1px solid var(--color-gray);
+}
+
+.header-sidebar_item a {
+    padding: 10px 0;
+    display: block;
+    position: relative;
+    z-index: 10;
+    color: var(--color-main);
+    font-size: var(--size-sm-h);
+}
+
+.header-sidebar_item i {
+    color: var(--color-main);
+}
+
+.header-sidebar_follower {
+    background: var(--bg-main);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 260px;
+    height: 40px;
+    left: -400px;
+    border-radius: 10px 0 0 10px;
+}
+
+.header-sidebar_follower.opened {
+    left: calc(2% - 4px);
+}
