@@ -408,3 +408,8 @@ input[type=number]::-webkit-outer-spin-button {
 .header-sidebar_follower.opened {
     left: calc(2% - 4px);
 }
+
+.profile-inner_wrapper {
+    padding-left: calc(15% + 40px);
+    padding-top: 20px;
+}
