@@ -49,7 +49,7 @@ input[type=number]::-webkit-outer-spin-button {
     background: var(--bg-main);
 }
 
-.header-currency_input span {
+.header-currency_input div {
     display: flex;
     align-items: center;
 }
