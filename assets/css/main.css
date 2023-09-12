@@ -56,7 +56,7 @@
 
 .container {
     max-width: 100%;
-    padding: 0 4%;
+    padding: 0 3%;
     margin: 0 auto;
 }
 
@@ -68,7 +68,8 @@ h5,
 h6,
 b,
 strong {
-    font-family: 'Primary-B';
+    font-family: 'Primary-M';
+    font-weight: normal;
 }
 
 header {
@@ -86,4 +87,13 @@ header::after {
     left: calc(15% + 40px);
     position: absolute;
     background: var(--color-gray);
+}
+
+.shadowed {
+    box-shadow: var(--main-shadow);
+    border-radius: 10px;
+}
+
+.shadowed:hover {
+    box-shadow: var(--main-shadow-h);
 }

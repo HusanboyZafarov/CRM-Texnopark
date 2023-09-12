@@ -100,9 +100,7 @@ currency_current_lang.addEventListener("click", () => {
 
 notification_opener.addEventListener("click", () => {
     notification_wrapp.classList.toggle("opened")
-    let bef = document.querySelector(".header-notification_wrapp::before")
     notification_wrapp.style.width = `${notification_opener.parentElement.getBoundingClientRect().width *= 1.4}px`
-    bef.style.width = `${notification_opener.parentElement.getBoundingClientRect().width *= 1.4}px`
     console.log(notification_opener.parentElement.clientRight);
     notification_opener.parentElement.classList.toggle("changed")
 })
@@ -118,3 +116,32 @@ notification_toggler.forEach(element => {
         element.parentElement.nextElementSibling.getBoundingClientRect().height ? element.parentElement.nextElementSibling.style.maxHeight = 0 : element.parentElement.nextElementSibling.style.maxHeight = `${element.parentElement.nextElementSibling.scrollHeight}px`
     });
 });
+
+let sidebar_items = document.querySelectorAll(".header-sidebar_item")
+let sidebar_item_active = document.querySelector(".header-sidebar_item.active")
+let follower = document.querySelector(".header-sidebar_follower")
+let sidebar_ul = document.querySelector(".header-sidebar_ul")
+
+sidebar_items.forEach(element => {
+    element.addEventListener("mouseenter", () => {
+        follower.style.top = `${element.getBoundingClientRect().top - 4}px`
+        follower.style.height = `${element.getBoundingClientRect().height + 6}px`
+        follower.style.width = `${element.getBoundingClientRect().width + 24}px`
+    })
+});
+
+sidebar_ul.addEventListener("mouseleave", () => {
+    setTimeout(() => {
+        follower.style.top = `${sidebar_item_active.getBoundingClientRect().top - 4}px`
+        follower.style.height = `${sidebar_item_active.getBoundingClientRect().height + 6}px`
+    }, 500);
+})
+
+window.addEventListener("load", () => {
+    follower.style.top = `${sidebar_item_active.getBoundingClientRect().top - 4}px`
+    follower.style.height = `${sidebar_item_active.getBoundingClientRect().height + 6}px`
+    follower.style.width = `${sidebar_item_active.getBoundingClientRect().width + 24}px`
+    setTimeout(() => {
+        follower.classList.add("opened")
+    }, 500);
+})

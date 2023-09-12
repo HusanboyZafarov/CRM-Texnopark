@@ -1,10 +1,12 @@
 :root {
     --color-main: #1B1F54;
+    --color-violet: #4d4aea;
     --color-white: #FFF;
     --color-dark: #3A3A3A;
     --color-dark-nonactive: #3A3A3A50;
     --color-gray: #C4C4C4;
-    --color-warn: #FEEA00;
+    /* --color-warn: #FEEA00; */
+    --color-warn: #ffd60a;
     --color-danger: #EF5B5B;
 
     --size-sm-text: 14px;
@@ -47,7 +49,7 @@ input[type=number]::-webkit-outer-spin-button {
     background: var(--bg-main);
 }
 
-.header-currency_input span {
+.header-currency_input div {
     display: flex;
     align-items: center;
 }
@@ -368,4 +370,181 @@ input[type=number]::-webkit-outer-spin-button {
 .header-notification_list {
     overflow-y: hidden;
     max-height: 0;
+}
+
+.header-sidebar {
+    position: fixed;
+    padding-top: 205px;
+    padding-left: 3%;
+    width: calc(15% + 41px);
+    top: 0;
+    left: 0;
+    height: 100vh;
+    border-right: 1px solid var(--color-gray);
+}
+
+.header-sidebar_item a {
+    padding: 10px 0;
+    display: block;
+    position: relative;
+    z-index: 10;
+    color: var(--color-main);
+    font-size: var(--size-sm-h);
+}
+
+.header-sidebar_item i {
+    color: var(--color-main);
+}
+
+.header-sidebar_follower {
+    background: var(--bg-main);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 260px;
+    height: 40px;
+    left: -400px;
+    border-radius: 10px 0 0 10px;
+}
+
+.header-sidebar_follower.opened {
+    left: calc(2% - 4px);
+}
+
+.profile-inner_wrapper {
+    padding-left: calc(15% + 40px);
+    padding-top: 30px;
+}
+
+.profile-top_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.profile-top_left_wrapper {
+    width: 30%;
+}
+
+.profile-top_right_wrapper {
+    width: 70%;
+}
+
+.profile-top_info {
+    padding: 20px 40px 20px 20px;
+    position: relative;
+}
+
+.profile-top_name {
+    font-size: var(--size-sm-h);
+    color: var(--color-dark);
+}
+
+.profile-top_id {
+    font-size: var(--size-m-text);
+    color: var(--color-dark);
+    margin-top: 6px;
+}
+
+.profile-top_number_info {
+    display: block;
+    margin-top: 20px;
+    font-size: var(--size-m-text);
+    color: var(--color-main);
+}
+
+.profile-top_number {
+    color: var(--color-violet);
+    font-size: var(--size-sm-d);
+}
+
+.profile-top_btn_group {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.profile-form_opener {
+    border: 2px solid var(--color-dark);
+    padding: 13px;
+    background: transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: var(--size-m-text);
+}
+
+.profile-form_opener.izox {
+    color: var(--color-violet);
+    border-color: var(--color-violet);
+}
+
+.profile-form_opener.izox:hover {
+    color: var(--color-white);
+    background: var(--color-violet);
+}
+
+.profile-form_opener.tolov {
+    color: var(--color-main);
+    border-color: var(--color-main);
+}
+
+.profile-form_opener.tolov:hover {
+    color: var(--color-white);
+    background: var(--color-main);
+}
+
+.profile-settings_btns {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    right: 20px;
+    top: 20px;
+}
+
+.profile-settings_btns button {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background: transparent;
+    font-size: var(--size-m-text);
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.profile-settings_btns button.edit,
+.profile-settings_btns button.edit i {
+    border-color: var(--color-violet);
+    color: var(--color-violet);
+}
+
+.profile-settings_btns button.edit:hover {
+    background: var(--color-violet);
+}
+
+.profile-settings_btns button.edit:hover i,
+.profile-settings_btns button.message:hover i,
+.profile-settings_btns button.delete:hover i {
+    color: var(--color-white);
+}
+
+.profile-settings_btns button.message,
+.profile-settings_btns button.message i {
+    border-color: var(--color-warn);
+    color: var(--color-warn);
+}
+
+.profile-settings_btns button.message:hover {
+    background: var(--color-warn);
+}
+
+.profile-settings_btns button.delete,
+.profile-settings_btns button.delete i {
+    border-color: var(--color-danger);
+    color: var(--color-danger);
+}
+
+.profile-settings_btns button.delete:hover {
+    background: var(--color-danger);
 }
