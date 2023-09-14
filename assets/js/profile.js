@@ -125,7 +125,7 @@ sidebar_items.forEach(element => {
     element.addEventListener("mouseenter", () => {
         follower.style.top = `${element.getBoundingClientRect().top - 4}px`
         follower.style.height = `${element.getBoundingClientRect().height + 6}px`
-        follower.style.width = `${element.getBoundingClientRect().width + 24}px`
+        follower.style.width = `${element.getBoundingClientRect().width}px`
     })
 });
 
