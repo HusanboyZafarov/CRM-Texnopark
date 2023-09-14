@@ -101,7 +101,6 @@ currency_current_lang.addEventListener("click", () => {
 notification_opener.addEventListener("click", () => {
     notification_wrapp.classList.toggle("opened")
     notification_wrapp.style.width = `${notification_opener.parentElement.getBoundingClientRect().width *= 1.4}px`
-    console.log(notification_opener.parentElement.clientRight);
     notification_opener.parentElement.classList.toggle("changed")
 })
 
@@ -144,4 +143,54 @@ window.addEventListener("load", () => {
     setTimeout(() => {
         follower.classList.add("opened")
     }, 500);
+})
+
+let main_form = document.querySelector(".main-form")
+let form_openers = document.querySelectorAll(".form_opener")
+let all_form_details = document.querySelectorAll(".main-form_details_wrapper")
+let form_heading = document.querySelector(".profile-form_heading")
+
+let settings_btn = document.querySelectorAll(".settings_btn")
+
+
+form_openers.forEach(identifier => {
+    identifier.addEventListener("click", () => {
+        main_form.classList.remove("opened")
+        setTimeout(() => {
+            all_form_details.forEach(detail => {
+                detail.classList.remove("opened")
+            })
+            word_message = identifier.classList.value.split(" ")[1]
+            let form_details = document.querySelector(`.main-form_${word_message}`)
+            form_details.classList.add("opened")
+            capitalized = word_message.charAt(0).toUpperCase() + word_message.slice(1)
+            form_heading.textContent = `${capitalized} yozish`
+            main_form.classList.add("opened")
+        }, 500);
+    })
+});
+
+settings_btn.forEach(identifier => {
+    identifier.addEventListener("click", () => {
+        main_form.classList.remove("opened")
+        setTimeout(() => {
+            all_form_details.forEach(detail => {
+                detail.classList.remove("opened")
+            })
+            word_message = identifier.classList.value.split(" ")[1]
+            let form_details = document.querySelector(`.main-form_${word_message}`)
+            if (form_details) {
+                form_details.classList.add("opened")
+                capitalized = word_message.charAt(0).toUpperCase() + word_message.slice(1)
+                form_heading.textContent = `${capitalized} yozish`
+                main_form.classList.add("opened")
+            }
+        }, 500);
+    })
+});
+
+let form_icon_closer = document.querySelector(".form_icon_closer")
+
+form_icon_closer.addEventListener("click", () => {
+    main_form.classList.remove("opened")
 })

@@ -434,30 +434,30 @@
                                     <a class="profile-top_number" href="tel:+998123456789">+998123456789</a>
 
                                     <div class="profile-top_btn_group">
-                                        <button class="profile-form_opener izox">
+                                        <button class="form_opener izox">
                                             Izox yozish
                                         </button>
 
-                                        <button class="profile-form_opener tolov">
+                                        <button class="form_opener tolov">
                                             To‘lov qabul qilish
                                         </button>
                                     </div>
 
                                     <div class="profile-settings_btns">
-                                        <button class="profile-settings_btn edit">
+                                        <button class="settings_btn edit">
                                             <i class="fa-solid fa-pen"></i>
                                         </button>
-                                        <button class="profile-settings_btn message">
+                                        <button class="settings_btn message">
                                             <i class="fa-solid fa-comment-dots"></i>
                                         </button>
-                                        <button class="profile-settings_btn delete">
+                                        <button class="settings_btn delete">
                                             <i class="fa-solid fa-trash-can"></i>
                                         </button>
                                     </div>
                                 </div>
                                 <div class="profile-top_sender">
                                     <form action="">
-                                        
+
                                     </form>
                                 </div>
                             </div>
@@ -471,6 +471,53 @@
                     </div>
                 </div>
             </div>
+            <form action="" class="main-form">
+                <div class="main-form_heading_wrapper">
+                    <h1 class="profile-form_heading">Izox yo'zish</h1>
+                    <div class="form_icon_closer">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                </div>
+
+                <div class="main-form_izox main-form_details_wrapper">
+                    <label for="profile-izox">Izox</label>
+                    <textarea id="profile-izox" name="profile-izox" class="profile-izox"></textarea>
+                    <button type="submit">Yo'zish</button>
+                </div>
+
+                <div class="main-form_tolov main-form_details_wrapper">
+                    <input type="number" placeholder="Summa">
+                    <textarea placeholder="Sabab yozing..." name="profile-izoh" class="profile-izoh"></textarea>
+                    <div class="main-form_btn_group">
+                        <button type="submit">Yo'zish</button>
+                        <input type="text" placeholder="Ism" value="id:12032006">
+                    </div>
+                </div>
+
+                <div class="main-form_edit main-form_details_wrapper">
+                    <label for="name">Ism*</label>
+                    <input type="text" id="name" name="name" value="Husanboy">
+                    <label for="surname">Familiya*</label>
+                    <input type="text" id="surname" name="surname" value="Zafarov">
+
+                    <div class="main-form_btn_group">
+                        <input type="text" placeholder="Telefon raqam: " value="+998123456789">
+                        <button type="submit">Yuborish</button>
+                    </div>
+                </div>
+
+                <div class="main-form_edit main-form_details_wrapper">
+                    <input type="number" placeholder="Summa">
+                    <textarea placeholder="Sabab yozing..." name="profile-izoh" class="profile-izoh"></textarea>
+                    <div class="main-form_btn_group">
+                        <button type="submit">Yo'zish</button>
+                        <input type="text" placeholder="Ism" value="id:12032006">
+                    </div>
+                </div>
+
+
+            </form>
+            <div class="main-form_bg_closer"></div>
         </div>
     </main>
 </body>
