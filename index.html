@@ -478,7 +478,7 @@
                         <i class="fa-solid fa-xmark"></i>
                     </div>
                 </div>
-
+                <input type="hidden" value="12032006" name="profile-id">
                 <div class="main-form_izox main-form_details_wrapper">
                     <label for="profile-izox">Izox</label>
                     <textarea id="profile-izox" name="profile-izox" class="profile-izox"></textarea>
@@ -486,33 +486,32 @@
                 </div>
 
                 <div class="main-form_tolov main-form_details_wrapper">
-                    <input type="number" placeholder="Summa">
-                    <textarea placeholder="Sabab yozing..." name="profile-izoh" class="profile-izoh"></textarea>
-                    <div class="main-form_btn_group">
-                        <button type="submit">Yo'zish</button>
-                        <input type="text" placeholder="Ism" value="id:12032006">
-                    </div>
+                    <label for="quantity-sum">Summa</label>
+                    <input type="number" name="quantity-sum" id="quantity-sum" min="0" value="0">
+
+                    <label for="quantity-reason">Sabab</label>
+                    <textarea name="quantity-reason" id="quantity-reason" class="quantity-reason"></textarea>
+                    <button type="submit">Yo'zish</button>
                 </div>
 
                 <div class="main-form_edit main-form_details_wrapper">
                     <label for="name">Ism*</label>
                     <input type="text" id="name" name="name" value="Husanboy">
+
                     <label for="surname">Familiya*</label>
                     <input type="text" id="surname" name="surname" value="Zafarov">
 
-                    <div class="main-form_btn_group">
-                        <input type="text" placeholder="Telefon raqam: " value="+998123456789">
-                        <button type="submit">Yuborish</button>
+                    <label for="phone-number">Telefon raqam*</label>
+                    <div class="form-phone_wrapper">
+                        <span class="form-starting_number">+998 </span>
+                        <input type="text" id="phone-number">
                     </div>
+                    <button type="submit">Yuborish</button>
                 </div>
 
                 <div class="main-form_edit main-form_details_wrapper">
-                    <input type="number" placeholder="Summa">
                     <textarea placeholder="Sabab yozing..." name="profile-izoh" class="profile-izoh"></textarea>
-                    <div class="main-form_btn_group">
-                        <button type="submit">Yo'zish</button>
-                        <input type="text" placeholder="Ism" value="id:12032006">
-                    </div>
+                    <button type="submit">Yo'zish</button>
                 </div>
 
 
@@ -521,6 +520,14 @@
         </div>
     </main>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.7/jquery.inputmask.min.js"></script>
 <script src="./assets/js/profile.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#phone-number").inputmask("(99) 999-99-99");
+    });
+</script>
 
 </html>

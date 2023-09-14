@@ -139,7 +139,7 @@ sidebar_ul.addEventListener("mouseleave", () => {
 window.addEventListener("load", () => {
     follower.style.top = `${sidebar_item_active.getBoundingClientRect().top - 4}px`
     follower.style.height = `${sidebar_item_active.getBoundingClientRect().height + 6}px`
-    follower.style.width = `${sidebar_item_active.getBoundingClientRect().width + 24}px`
+    follower.style.width = `${sidebar_item_active.getBoundingClientRect().width}px`
     setTimeout(() => {
         follower.classList.add("opened")
     }, 500);
@@ -181,8 +181,17 @@ settings_btn.forEach(identifier => {
             let form_details = document.querySelector(`.main-form_${word_message}`)
             if (form_details) {
                 form_details.classList.add("opened")
-                capitalized = word_message.charAt(0).toUpperCase() + word_message.slice(1)
-                form_heading.textContent = `${capitalized} yozish`
+                switch (word_message) {
+                    case "edit":
+                        form_heading.textContent = `O'zgartirish`
+                        break
+                    case "message":
+                        form_heading.textContent = `Habar yo'zish`
+                        break
+                    case "delete":
+                        form_heading.textContent = `Ochirish`
+                        break
+                }
                 main_form.classList.add("opened")
             }
         }, 500);
