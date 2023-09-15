@@ -222,3 +222,85 @@ let areatext = document.querySelector("#sender_body")
 top_reset_btn.addEventListener("click", () => {
     areatext.value = ""
 })
+
+let tab_item_izoxlar = document.querySelector(".profile-tab_item.izoxlar")
+let tab_item_eslatma = document.querySelector(".profile-tab_item.eslatma")
+let tab_item_follower = document.querySelector(".profile-tab_item_follower")
+let tab_item_active = document.querySelector(".profile-tab_item.active")
+let profile_top_tabs_wrapper = document.querySelector(".profile_top_tabs_wrapper")
+
+window.addEventListener("load", () => {
+    tab_item_follower.style.width = `${tab_item_active.getBoundingClientRect().width}px`
+})
+
+tab_item_eslatma.addEventListener("mouseenter", () => {
+    tab_item_izoxlar.classList.remove("active")
+    tab_item_eslatma.classList.add("active")
+    tab_item_follower.classList.add("changed")
+    tab_item_follower.style.width = `${tab_item_eslatma.getBoundingClientRect().width}px`
+})
+
+tab_item_izoxlar.addEventListener("mouseenter", () => {
+    tab_item_izoxlar.classList.add("active")
+    tab_item_eslatma.classList.remove("active")
+    tab_item_follower.classList.remove("changed")
+    tab_item_follower.style.width = `${tab_item_izoxlar.getBoundingClientRect().width}px`
+})
+
+tab_item_izoxlar.addEventListener("click", () => {
+    tab_item_izoxlar.classList.add("active")
+    tab_item_eslatma.classList.remove("active")
+    tab_item_eslatma.classList.remove("current")
+    tab_item_izoxlar.classList.add("current")
+    tab_item_follower.classList.remove("changed")
+    tab_item_follower.style.width = `${tab_item_izoxlar.getBoundingClientRect().width}px`
+})
+
+tab_item_eslatma.addEventListener("click", () => {
+    tab_item_izoxlar.classList.remove("active")
+    tab_item_eslatma.classList.add("active")
+    tab_item_izoxlar.classList.remove("current")
+    tab_item_eslatma.classList.add("current")
+    tab_item_follower.classList.add("changed")
+    tab_item_follower.style.width = `${tab_item_eslatma.getBoundingClientRect().width}px`
+})
+
+profile_top_tabs_wrapper.addEventListener("mouseleave", () => {
+    setTimeout(() => {
+        if (tab_item_eslatma.classList.value.split(" ").includes("current")) {
+            tab_item_izoxlar.classList.remove("active")
+            tab_item_eslatma.classList.add("active")
+            tab_item_follower.classList.add("changed")
+            tab_item_follower.style.width = `${tab_item_eslatma.getBoundingClientRect().width}px`
+        } else {
+            tab_item_izoxlar.classList.add("active")
+            tab_item_eslatma.classList.remove("active")
+            tab_item_follower.classList.remove("changed")
+            tab_item_follower.style.width = `${tab_item_izoxlar.getBoundingClientRect().width}px`
+        }
+    }, 500);
+})
+
+let top_tab_item = document.querySelectorAll(".profile-top_tab_item")
+window.addEventListener("load", () => {
+    for (let i = 0; i < top_tab_item.length; i++) {
+        top_tab_item[i].firstElementChild.textContent = `${i + 1}. `
+    }
+})
+
+let top_sender_btn = document.querySelector(".profile-top_sender_btn")
+let top_tab_list = document.querySelector(".profile-top_tab_list")
+top_sender_btn.addEventListener("click", () => {
+    if (areatext.value) {
+        span = document.createElement("span")
+        li = document.createElement("li")
+        li.className = "profile-top_tab_item"
+        span.className = "profile-top_tab_item_number"
+        span.textContent = `${top_tab_list.childElementCount + 1}. `
+        textNode = document.createTextNode(`${areatext.value}`)
+        li.appendChild(span)
+        li.appendChild(textNode)
+        top_tab_list.appendChild(li)
+        areatext.value = ""
+    }
+})
