@@ -228,6 +228,12 @@ let tab_item_eslatma = document.querySelector(".profile-tab_item.eslatma")
 let tab_item_follower = document.querySelector(".profile-tab_item_follower")
 let tab_item_active = document.querySelector(".profile-tab_item.active")
 let profile_top_tabs_wrapper = document.querySelector(".profile_top_tabs_wrapper")
+let top_sender_btn = document.querySelector(".profile-top_sender_btn")
+let top_tab_list = document.querySelector(".profile-top_tab_list.izoxlar")
+let top_tab_list_eslatma = document.querySelector(".profile-top_tab_list.eslatma")
+let top_tab_item = document.querySelectorAll(".profile-top_tab_list.izoxlar .profile-top_tab_item")
+let top_tab_item_eslatma = document.querySelectorAll(".profile-top_tab_list.eslatma .profile-top_tab_item")
+let top_rab_heading = document.querySelector(".profile-top_rab_heading")
 
 window.addEventListener("load", () => {
     tab_item_follower.style.width = `${tab_item_active.getBoundingClientRect().width}px`
@@ -254,6 +260,15 @@ tab_item_izoxlar.addEventListener("click", () => {
     tab_item_izoxlar.classList.add("current")
     tab_item_follower.classList.remove("changed")
     tab_item_follower.style.width = `${tab_item_izoxlar.getBoundingClientRect().width}px`
+
+    top_rab_heading.textContent = "Izox"
+    top_tab_list.parentElement.classList.add("blured")
+
+    setTimeout(() => {
+        top_tab_list.classList.remove("noned")
+        top_tab_list_eslatma.classList.add("noned")
+        top_tab_list.parentElement.classList.remove("blured")
+    }, 500);
 })
 
 tab_item_eslatma.addEventListener("click", () => {
@@ -263,6 +278,14 @@ tab_item_eslatma.addEventListener("click", () => {
     tab_item_eslatma.classList.add("current")
     tab_item_follower.classList.add("changed")
     tab_item_follower.style.width = `${tab_item_eslatma.getBoundingClientRect().width}px`
+
+    top_rab_heading.textContent = "Eslatma"
+    top_tab_list.parentElement.classList.add("blured")
+    setTimeout(() => {
+        top_tab_list.classList.add("noned")
+        top_tab_list_eslatma.classList.remove("noned")
+        top_tab_list.parentElement.classList.remove("blured")
+    }, 500);
 })
 
 profile_top_tabs_wrapper.addEventListener("mouseleave", () => {
@@ -281,15 +304,19 @@ profile_top_tabs_wrapper.addEventListener("mouseleave", () => {
     }, 500);
 })
 
-let top_tab_item = document.querySelectorAll(".profile-top_tab_item")
 window.addEventListener("load", () => {
     for (let i = 0; i < top_tab_item.length; i++) {
         top_tab_item[i].firstElementChild.textContent = `${i + 1}. `
     }
 })
 
-let top_sender_btn = document.querySelector(".profile-top_sender_btn")
-let top_tab_list = document.querySelector(".profile-top_tab_list")
+window.addEventListener("load", () => {
+    for (let i = 0; i < top_tab_item_eslatma.length; i++) {
+        top_tab_item_eslatma[i].firstElementChild.textContent = `${i + 1}. `
+    }
+})
+
+
 top_sender_btn.addEventListener("click", () => {
     if (areatext.value) {
         span = document.createElement("span")
@@ -300,7 +327,11 @@ top_sender_btn.addEventListener("click", () => {
         textNode = document.createTextNode(`${areatext.value}`)
         li.appendChild(span)
         li.appendChild(textNode)
-        top_tab_list.appendChild(li)
+        if (top_tab_list.classList.value.split(" ").includes("noned")) {
+            top_tab_list_eslatma.appendChild(li)
+        } else {
+            top_tab_list.appendChild(li)
+        }
         areatext.value = ""
     }
 })
