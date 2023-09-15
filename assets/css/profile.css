@@ -418,6 +418,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .profile-top_wrapper {
     display: flex;
+    gap: 20px;
     justify-content: space-between;
     align-items: start;
 }
@@ -834,4 +835,118 @@ input[type=number]::-webkit-outer-spin-button {
 
 .profile-bottom_list_pagination {
     margin-top: 20px;
+}
+
+.profile-top_sender_form {
+    margin-top: 20px;
+    padding: 20px 80px 20px 20px;
+    position: relative;
+}
+
+.profile-top_sender_form textarea {
+    resize: none;
+    height: 40px;
+    width: 100%;
+    outline: none;
+    font-size: var(--size-m-text);
+    border: none;
+    color: var(--color-dark);
+}
+
+.profile-top_sender_form textarea::-webkit-scrollbar {
+    width: 0;
+}
+
+.profile-top_sender_info {
+    margin-top: 20px;
+}
+
+.profile-top_sender_info span {
+    font-size: var(--size-sm-text);
+    color: var(--color-dark);
+}
+
+.profile-top_sender_info_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: self-start;
+    gap: 10px;
+}
+
+.profile-top_sender_wrapper {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.profile-top_sender_btn,
+.profile-top_reset_btn {
+    border: 2px solid var(--color-violet);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.profile-top_sender_btn:hover {
+    background: var(--color-violet);
+}
+
+.profile-top_reset_btn:hover {
+    background: var(--color-danger);
+}
+
+.profile-top_reset_btn:hover i,
+.profile-top_sender_btn:hover i {
+    color: var(--color-white);
+}
+
+.profile-top_sender_btn i,
+.profile-top_reset_btn i {
+    font-size: var(--size-l-text);
+    color: var(--color-violet);
+}
+
+.profile-top_reset_btn i {
+    color: var(--color-danger);
+}
+
+.profile-top_reset_btn {
+    border-color: var(--color-danger);
+}
+
+.profile-top_rab_heading {
+    font-size: var(--size-sm-h);
+}
+
+.profile_top_tabs_wrapper {
+    display: flex;
+    padding: 20px 0;
+    gap: 20px;
+}
+
+.profile-tab_item {
+    color: var(--color-main);
+    position: relative;
+    font-size: var(--size-m-text);
+}
+
+.profile-tab_item::before {
+    content: "";
+    position: absolute;
+    display: block;
+
+}
+
+.profile-tab_item.active {}
+
+.profile-top_tab_content {
+    padding: 20px;
 }

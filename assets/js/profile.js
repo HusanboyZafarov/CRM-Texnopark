@@ -203,3 +203,22 @@ let form_icon_closer = document.querySelector(".form_icon_closer")
 form_icon_closer.addEventListener("click", () => {
     main_form.classList.remove("opened")
 })
+
+
+
+let sender_time = document.querySelector(".profile-sender_time")
+setInterval(() => {
+    var currentdate = new Date();
+    hour = currentdate.getHours() < 10 ? `0${currentdate.getHours()}` : currentdate.getHours()
+    day = currentdate.getDate() < 10 ? `0${currentdate.getDay()}` : currentdate.getDate()
+    month = currentdate.getMonth() + 1 < 10 ? `0${currentdate.getMonth() + 1}` : currentdate.getMonth()
+    minute = currentdate.getMinutes() < 10 ? `0${currentdate.getMinutes()}` : currentdate.getMinutes()
+    sender_time.textContent = `${day}.${month}.${currentdate.getFullYear()} ${hour}:${minute}`
+}, 1000);
+
+let top_reset_btn = document.querySelector(".profile-top_reset_btn")
+let areatext = document.querySelector("#sender_body")
+
+top_reset_btn.addEventListener("click", () => {
+    areatext.value = ""
+})
