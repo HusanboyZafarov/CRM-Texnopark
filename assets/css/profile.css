@@ -447,10 +447,7 @@ header {
     left: calc(2% - 4px);
 }
 
-.profile-inner_wrapper {
-    padding-left: calc(15% + 40px);
-    padding-top: 30px;
-}
+
 
 .profile-top_wrapper {
     display: flex;

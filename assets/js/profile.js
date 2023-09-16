@@ -208,9 +208,7 @@ settings_btn.forEach(identifier => {
 
 let form_icon_closer = document.querySelector(".form_icon_closer")
 
-form_icon_closer.addEventListener("click", () => {
-    profile_form.classList.remove("opened")
-})
+
 
 
 
@@ -373,3 +371,15 @@ closer_openers.forEach(item => {
         closer.classList.add("opened")
     })
 });
+
+form_icon_closer.addEventListener("click", () => {
+    profile_form.classList.remove("opened")
+    closer.classList.remove("opened")
+})
+
+let form_undelete = document.querySelector(".profile-form_undelete")
+form_undelete.addEventListener("click", () => {
+    profile_form.classList.remove("opened")
+    closer.classList.remove("opened")
+    form_modal.classList.remove("opened")
+})
