@@ -7,8 +7,11 @@ let currency_incr = document.querySelectorAll(".header-currency_incr"),
     notification_opener = document.querySelector(".header-notification_opener"),
     notification_closer = document.querySelector(".header-notification_closer"),
     notification_wrapp = document.querySelector('.header-notification_wrapp'),
+    notification_bg = document.querySelector(".header-notification_bg"),
     currency_changer = document.querySelector(".header-currency_changer"),
     currency_current_lang = document.querySelector(".header-currency_current_lang")
+var closer = document.querySelector(".closer")
+
 
 let rub = 0
 let usd = 0
@@ -100,7 +103,9 @@ currency_current_lang.addEventListener("click", () => {
 
 notification_opener.addEventListener("click", () => {
     notification_wrapp.classList.toggle("opened")
+    notification_bg.classList.toggle("opened")
     notification_wrapp.style.width = `${notification_opener.parentElement.getBoundingClientRect().width *= 1.4}px`
+    notification_bg.style.width = `${notification_opener.parentElement.getBoundingClientRect().width *= 1.4}px`
     notification_opener.parentElement.classList.toggle("changed")
 })
 
@@ -145,9 +150,9 @@ window.addEventListener("load", () => {
     }, 500);
 })
 
-let main_form = document.querySelector(".main-form")
+let profile_form = document.querySelector(".profile-form")
 let form_openers = document.querySelectorAll(".form_opener")
-let all_form_details = document.querySelectorAll(".main-form_details_wrapper")
+let all_form_details = document.querySelectorAll(".profile-form_details_wrapper")
 let form_heading = document.querySelector(".profile-form_heading")
 
 let settings_btn = document.querySelectorAll(".settings_btn")
@@ -155,35 +160,38 @@ let settings_btn = document.querySelectorAll(".settings_btn")
 
 form_openers.forEach(identifier => {
     identifier.addEventListener("click", () => {
-        main_form.classList.remove("opened")
+        profile_form.classList.remove("opened")
         setTimeout(() => {
             all_form_details.forEach(detail => {
                 detail.classList.remove("opened")
             })
-            word_message = identifier.classList.value.split(" ")[1]
-            let form_details = document.querySelector(`.main-form_${word_message}`)
+            word_message = identifier.classList.value.split(" ")[2]
+            let form_details = document.querySelector(`.profile-form_${word_message}`)
             form_details.classList.add("opened")
             capitalized = word_message.charAt(0).toUpperCase() + word_message.slice(1)
             form_heading.textContent = `${capitalized} yozish`
-            main_form.classList.add("opened")
+            profile_form.classList.add("opened")
         }, 500);
     })
 });
 
 settings_btn.forEach(identifier => {
     identifier.addEventListener("click", () => {
-        main_form.classList.remove("opened")
+        profile_form.classList.remove("opened")
         setTimeout(() => {
             all_form_details.forEach(detail => {
                 detail.classList.remove("opened")
             })
-            word_message = identifier.classList.value.split(" ")[1]
-            let form_details = document.querySelector(`.main-form_${word_message}`)
+            word_message = identifier.classList.value.split(" ")[2]
+            let form_details = document.querySelector(`.profile-form_${word_message}`)
             if (form_details) {
                 form_details.classList.add("opened")
                 switch (word_message) {
                     case "edit":
                         form_heading.textContent = `O'zgartirish`
+                        let phone_number = document.querySelector("#phone-number")
+                        let top_number = document.querySelector(".profile-top_number")
+                        phone_number.value = `${top_number.textContent.slice(4, 13)}`
                         break
                     case "message":
                         form_heading.textContent = `Habar yo'zish`
@@ -192,7 +200,7 @@ settings_btn.forEach(identifier => {
                         form_heading.textContent = `Ochirish`
                         break
                 }
-                main_form.classList.add("opened")
+                profile_form.classList.add("opened")
             }
         }, 500);
     })
@@ -201,7 +209,7 @@ settings_btn.forEach(identifier => {
 let form_icon_closer = document.querySelector(".form_icon_closer")
 
 form_icon_closer.addEventListener("click", () => {
-    main_form.classList.remove("opened")
+    profile_form.classList.remove("opened")
 })
 
 
@@ -261,10 +269,10 @@ tab_item_izoxlar.addEventListener("click", () => {
     tab_item_follower.classList.remove("changed")
     tab_item_follower.style.width = `${tab_item_izoxlar.getBoundingClientRect().width}px`
 
-    top_rab_heading.textContent = "Izox"
     top_tab_list.parentElement.classList.add("blured")
 
     setTimeout(() => {
+        top_rab_heading.textContent = "Izoxlar"
         top_tab_list.classList.remove("noned")
         top_tab_list_eslatma.classList.add("noned")
         top_tab_list.parentElement.classList.remove("blured")
@@ -279,9 +287,9 @@ tab_item_eslatma.addEventListener("click", () => {
     tab_item_follower.classList.add("changed")
     tab_item_follower.style.width = `${tab_item_eslatma.getBoundingClientRect().width}px`
 
-    top_rab_heading.textContent = "Eslatma"
     top_tab_list.parentElement.classList.add("blured")
     setTimeout(() => {
+        top_rab_heading.textContent = "Eslatmalar"
         top_tab_list.classList.add("noned")
         top_tab_list_eslatma.classList.remove("noned")
         top_tab_list.parentElement.classList.remove("blured")
@@ -323,15 +331,45 @@ top_sender_btn.addEventListener("click", () => {
         li = document.createElement("li")
         li.className = "profile-top_tab_item"
         span.className = "profile-top_tab_item_number"
-        span.textContent = `${top_tab_list.childElementCount + 1}. `
         textNode = document.createTextNode(`${areatext.value}`)
-        li.appendChild(span)
-        li.appendChild(textNode)
         if (top_tab_list.classList.value.split(" ").includes("noned")) {
+            span.textContent = `${top_tab_list_eslatma.childElementCount + 1}. `
             top_tab_list_eslatma.appendChild(li)
         } else {
+            span.textContent = `${top_tab_list.childElementCount + 1}. `
             top_tab_list.appendChild(li)
         }
         areatext.value = ""
+
+        li.appendChild(span)
+        li.appendChild(textNode)
     }
 })
+
+let form_delete_sure = document.querySelector(".profile-form_delete_sure")
+let form_closer = document.querySelector(".profile-form_closer")
+
+let form_modal = document.querySelector(".profile-form_modal")
+
+form_delete_sure.addEventListener("click", () => {
+    form_modal.classList.add("opened")
+    profile_form.classList.remove("opened")
+})
+
+form_closer.addEventListener("click", () => {
+    profile_form.classList.remove("opened")
+    closer.classList.remove("opened")
+})
+
+closer.addEventListener("click", () => {
+    profile_form.classList.remove("opened")
+    closer.classList.remove("opened")
+})
+
+let closer_openers = document.querySelectorAll(".closer_opener")
+
+closer_openers.forEach(item => {
+    item.addEventListener("click", () => {
+        closer.classList.add("opened")
+    })
+});
