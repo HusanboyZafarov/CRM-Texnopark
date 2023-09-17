@@ -19,9 +19,11 @@ Tel: +998123456789
     <!-- Links -->
     <link rel="stylesheet" href="../assets/main-css/root.css">
     <link rel="stylesheet" href="./assets/css/main.css">
-    <link rel="stylesheet" href="./assets/css/profile.css">
+    <link rel="stylesheet" href="./assets/css/stats.css">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css">
-    <title>Profile - Husanboy Zafarov</title>
+
+    <link rel="stylesheet" href="./assets/lib/css/datepicker.material.css">
+    <title>Statistika</title>
 </head>
 
 <body>
@@ -377,14 +379,20 @@ Tel: +998123456789
 
             <div class="header-sidebar">
                 <ul class="header-sidebar_ul">
+                    <li class="header-sidebar_item active">
+                        <a href="#">
+                            <i class="fa-solid fa-house"></i>
+                            Statistika
+                        </a>
+                    </li>
                     <li class="header-sidebar_item">
                         <a href="#">
                             <i class="fas fa-user"></i>
                             Lidlar
                         </a>
                     </li>
-                    <li class="header-sidebar_item active">
-                        <a href="#">
+                    <li class="header-sidebar_item ">
+                        <a href="./profile.html">
                             <i class="fas fa-users"></i>
                             Mijozlar
                         </a>
@@ -420,250 +428,174 @@ Tel: +998123456789
     </header>
 
     <main>
-        <div class="profile-hero">
-            <div class="section-wrapp">
+        <div class="stats">
+            <div class="section-wrapper">
                 <div class="container">
                     <div class="inner-wrapper">
-                        <div class="profile-top_wrapper">
-                            <div class="profile-top_left_wrapper">
-                                <div class="profile-top_info shadowed">
-                                    <h1 class="profile-top_name">Husanboy Zafarov</h1>
-                                    <span class="profile-top_id">[id:12032006]</span>
-                                    <span class="profile-top_number_info">Telefon:</span>
-                                    <a class="profile-top_number" href="tel:+998123456789">+998991235445</a>
-
-                                    <div class="profile-top_btn_group">
-                                        <button class="form_opener closer_opener izox">
-                                            Izox yozish
-                                        </button>
-
-                                        <button class="form_opener closer_opener tolov">
-                                            To‘lov qabul qilish
-                                        </button>
+                        <div class="stats-info_block shadowed">
+                            <h1 class="stats-info_heading">Umimiy aylanma</h1>
+                            <p class="stats-info_text">
+                                Oxirgi 30 kunlik
+                            </p>
+                            <form class="stats-form" action="">
+                                <div class="stats-form_filter_wrapper">
+                                    <div class="stats-form_input_wrapper shadowed">
+                                        <label for="stats-form_datetime_start1">
+                                            <i class="fa-solid fa-calendar-days"></i>
+                                        </label>
+                                        <input type="datetime-local" id="stats-form_datetime_start1"
+                                            name="stats-form_datetime_start1" placeholder="Sana">
+                                        <label for="stats-form_datetime_start1">
+                                            <i class="fa-solid fa-chevron-down"></i>
+                                        </label>
                                     </div>
-
-                                    <div class="profile-settings_btns">
-                                        <button class="settings_btn closer_opener edit">
-                                            <i class="fa-solid fa-pen"></i>
-                                        </button>
-                                        <button class="settings_btn closer_opener message">
-                                            <i class="fa-solid fa-comment-dots"></i>
-                                        </button>
-                                        <button class="settings_btn closer_opener delete">
-                                            <i class="fa-solid fa-trash-can"></i>
-                                        </button>
+                                    <span>
+                                        dan
+                                    </span>
+                                    <div class="stats-form_input_wrapper shadowed">
+                                        <label for="stats-form_datetime_end1">
+                                            <i class="fa-solid fa-calendar-days"></i>
+                                        </label>
+                                        <input type="datetime-local" id="stats-form_datetime_end1"
+                                            name="stats-form_datetime_end1" placeholder="Sana">
+                                        <label for="stats-form_datetime_end1">
+                                            <i class="fa-solid fa-chevron-down"></i>
+                                        </label>
                                     </div>
+                                    <span>
+                                        gacha
+                                    </span>
                                 </div>
-                                <div class="profile-top_sender">
-                                    <form action="" class="profile-top_sender_form shadowed">
-                                        <div class="profile-top_sender_info_wrapper">
-                                            <textarea name="sender_body"
-                                                id="sender_body">Bu yerda qisqa habar bo'lishi mumkin</textarea>
-                                            <div class="profile-top_sender_wrapper">
-                                                <span class="profile-top_sender_btn">
-                                                    <i class="fa-solid fa-caret-right"></i>
-                                                </span>
-                                                <span class="profile-top_reset_btn">
-                                                    <i class="fa-solid fa-xmark"></i>
-                                                </span>
-                                            </div>
-                                        </div>
-
-                                        <p class="profile-top_sender_info">
-                                            <span class="profile-sender_username">
-                                                Husanboy Zafarov
-                                            </span>
-                                            <span class="profile-sender_time">
-
-                                            </span>
-                                        </p>
-                                    </form>
-                                </div>
-                            </div>
-
-                            <div class="profile-top_right_wrapper">
-                                <div class="profile_top_tabs_wrapper">
-                                    <div class="profile-tab_item izoxlar current active">Izoxlar</div>
-                                    <div class="profile-tab_item eslatma">Eslatma</div>
-                                    <div class="profile-tab_item_follower"></div>
-                                </div>
-
-                                <div class="profile-top_tab_content shadowed">
-                                    <h1 class="profile-top_rab_heading">Izoxlar</h1>
-
-                                    <ul class="profile-top_tab_list izoxlar">
-                                        <li class="profile-top_tab_item"><span
-                                                class="profile-top_tab_item_number">1.</span> Izox</li>
-                                        <li class="profile-top_tab_item"><span
-                                                class="profile-top_tab_item_number">1.</span> Izox</li>
-                                        <li class="profile-top_tab_item"><span
-                                                class="profile-top_tab_item_number">1.</span> Izox</li>
-                                        <li class="profile-top_tab_item"><span
-                                                class="profile-top_tab_item_number">1.</span> Izox</li>
-                                    </ul>
-
-                                    <ul class="profile-top_tab_list noned eslatma">
-                                        <li class="profile-top_tab_item"><span
-                                                class="profile-top_tab_item_number">1.</span> Eslatma</li>
-                                        <li class="profile-top_tab_item"><span
-                                                class="profile-top_tab_item_number">1.</span> Eslatma</li>
-                                        <li class="profile-top_tab_item"><span
-                                                class="profile-top_tab_item_number">1.</span> Eslatma</li>
-                                        <li class="profile-top_tab_item"><span
-                                                class="profile-top_tab_item_number">1.</span> Eslatma</li>
-                                    </ul>
-                                </div>
+                            </form>
+                            <div class="stats-chart_wrapper">
+                                <canvas id="pie-chart" width="100" height="100"></canvas>
                             </div>
                         </div>
 
-                        <div class="profile-bottom_wrapper">
-                            <h1 class="profile-bottom_heading">To‘lovlar</h1>
-                            <div class="profile-bottom_list_gather shadowed">
-                                <ul class="profile-bottom_list_info">
-                                    <li class="profile-bottom_item_info">Sana</li>
-                                    <li class="profile-bottom_item_info">Miqdor</li>
-                                    <li class="profile-bottom_item_info">Maxsulot</li>
-                                    <li class="profile-bottom_item_info">Xodim</li>
-                                </ul>
-
-                                <div class="profile_bottom_list_wrapper">
-                                    <ul class="profile-bottom_list">
-                                        <li class="profile-bottom_item">14.07.2023</li>
-                                        <li class="profile-bottom_item">2 500 000</li>
-                                        <li class="profile-bottom_item">Web kamera</li>
-                                        <li class="profile-bottom_item">A.Olimov</li>
-                                    </ul>
-                                    <ul class="profile-bottom_list">
-                                        <li class="profile-bottom_item">14.07.2023</li>
-                                        <li class="profile-bottom_item">12 000 000</li>
-                                        <li class="profile-bottom_item">Telefon</li>
-                                        <li class="profile-bottom_item">B.Muratov</li>
-                                    </ul>
-                                    <ul class="profile-bottom_list">
-                                        <li class="profile-bottom_item">14.07.2023</li>
-                                        <li class="profile-bottom_item">358 000</li>
-                                        <li class="profile-bottom_item">AirPods</li>
-                                        <li class="profile-bottom_item">A.Olimov</li>
-                                    </ul>
-
-                                    <ul class="profile-bottom_list_pagination">
-
-                                        <li class="profile-bottom_item_pagination prev">
-                                            <a href="#">
-                                                <i class="fa-solid fa-chevron-left"></i>
-                                            </a>
-                                        </li>
-                                        <li class="profile-bottom_item_pagination link">
-                                            <a href="#">
-                                                1
-                                            </a>
-                                        </li>
-                                        <li class="profile-bottom_item_pagination link active">
-                                            <a href="#">
-                                                2
-                                            </a>
-                                        </li>
-                                        <li class="profile-bottom_item_pagination link">
-                                            <a href="#">
-                                                3
-                                            </a>
-                                        </li>
-
-                                        <li class="profile-bottom_item_pagination page_number">
-                                            20 / 30
-                                        </li>
-
-                                        <li class="profile-bottom_item_pagination next">
-                                            <a href="#">
-                                                <i class="fa-solid fa-chevron-right"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
+                        <div class="stats-info_block shadowed">
+                            <h1 class="stats-info_heading">Tovar aylanmasi</h1>
+                            <p class="stats-info_text">
+                                Oxirgi 30 kunlik
+                            </p>
+                            <form class="stats-form" action="">
+                                <div class="stats-form_filter_wrapper">
+                                    <div class="stats-form_input_wrapper shadowed">
+                                        <label for="stats-form_datetime_start2">
+                                            <i class="fa-solid fa-calendar-days"></i>
+                                        </label>
+                                        <input type="datetime-local" id="stats-form_datetime_start2"
+                                            name="stats-form_datetime_start2" placeholder="Sana">
+                                        <label for="stats-form_datetime_start2">
+                                            <i class="fa-solid fa-chevron-down"></i>
+                                        </label>
+                                    </div>
+                                    <span>
+                                        dan
+                                    </span>
+                                    <div class="stats-form_input_wrapper shadowed">
+                                        <label for="stats-form_datetime_end2">
+                                            <i class="fa-solid fa-calendar-days"></i>
+                                        </label>
+                                        <input type="datetime-local" id="stats-form_datetime_end2"
+                                            name="stats-form_datetime_end2" placeholder="Sana">
+                                        <label for="stats-form_datetime_end2">
+                                            <i class="fa-solid fa-chevron-down"></i>
+                                        </label>
+                                    </div>
+                                    <span>
+                                        gacha
+                                    </span>
                                 </div>
+                            </form>
+                            <div class="stats-chart_wrapper">
+                                <canvas id="pie-chart2" width="100" height="100"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="inner-wrapper">
+                        <div class="stats-info_block shadowed">
+                            <h1 class="stats-info_heading">Mijozlar segmenti</h1>
+                            <p class="stats-info_text">
+                                Oxirgi 30 kunlik
+                            </p>
+                            <form class="stats-form" action="">
+                                <div class="stats-form_filter_wrapper">
+                                    <div class="stats-form_input_wrapper shadowed">
+                                        <label for="stats-form_datetime_start3">
+                                            <i class="fa-solid fa-calendar-days"></i>
+                                        </label>
+                                        <input type="datetime-local" id="stats-form_datetime_start3"
+                                            name="stats-form_datetime_start3" placeholder="Sana">
+                                        <label for="stats-form_datetime_start3">
+                                            <i class="fa-solid fa-chevron-down"></i>
+                                        </label>
+                                    </div>
+                                    <span>
+                                        dan
+                                    </span>
+                                    <div class="stats-form_input_wrapper shadowed">
+                                        <label for="stats-form_datetime_end3">
+                                            <i class="fa-solid fa-calendar-days"></i>
+                                        </label>
+                                        <input type="datetime-local" id="stats-form_datetime_end3"
+                                            name="stats-form_datetime_end3" placeholder="Sana">
+                                        <label for="stats-form_datetime_end3">
+                                            <i class="fa-solid fa-chevron-down"></i>
+                                        </label>
+                                    </div>
+                                    <span>
+                                        gacha
+                                    </span>
+                                </div>
+                            </form>
+                            <div class="stats-chart_wrapper">
+                                <canvas id="pie-chart3" width="100" height="100"></canvas>
+                            </div>
+                        </div>
+
+                        <div class="stats-info_block shadowed">
+                            <h1 class="stats-info_heading">Harajatlar</h1>
+                            <p class="stats-info_text">
+                                Oxirgi 30 kunlik
+                            </p>
+                            <form class="stats-form" action="">
+                                <div class="stats-form_filter_wrapper">
+                                    <div class="stats-form_input_wrapper shadowed">
+                                        <label for="stats-form_datetime_start4">
+                                            <i class="fa-solid fa-calendar-days"></i>
+                                        </label>
+                                        <input type="datetime-local" id="stats-form_datetime_start4"
+                                            name="stats-form_datetime_start4" placeholder="Sana">
+                                        <label for="stats-form_datetime_start4">
+                                            <i class="fa-solid fa-chevron-down"></i>
+                                        </label>
+                                    </div>
+                                    <span>
+                                        dan
+                                    </span>
+                                    <div class="stats-form_input_wrapper shadowed">
+                                        <label for="stats-form_datetime_end4">
+                                            <i class="fa-solid fa-calendar-days"></i>
+                                        </label>
+                                        <input type="datetime-local" id="stats-form_datetime_end4"
+                                            name="stats-form_datetime_end4" placeholder="Sana">
+                                        <label for="stats-form_datetime_end4">
+                                            <i class="fa-solid fa-chevron-down"></i>
+                                        </label>
+                                    </div>
+                                    <span>
+                                        gacha
+                                    </span>
+                                </div>
+                            </form>
+                            <div class="stats-chart_wrapper">
+                                <canvas id="pie-chart4" width="100" height="100"></canvas>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <form action="" class="profile-form">
-                <div class="profile-form_heading_wrapper">
-                    <h1 class="profile-form_heading">Izox yo'zish</h1>
-                    <div class="form_icon_closer">
-                        <i class="fa-solid fa-xmark"></i>
-                    </div>
-                </div>
-                <input type="hidden" value="12032006" name="profile-id">
-                <div class="profile-form_izox profile-form_details_wrapper">
-                    <label for="profile-izox">Izox</label>
-                    <textarea id="profile-izox" name="profile-izox" class="profile-izox"></textarea>
-                    <button type="submit">Yo'zish</button>
-                </div>
-
-                <div class="profile-form_tolov profile-form_details_wrapper">
-                    <label for="quantity-sum">Summa</label>
-                    <input type="number" name="quantity-sum" id="quantity-sum" min="0" value="0">
-
-                    <label for="quantity-reason">Sabab</label>
-                    <textarea name="quantity-reason" id="quantity-reason" class="quantity-reason"></textarea>
-                    <button type="submit">Yo'zish</button>
-                </div>
-
-                <div class="profile-form_edit profile-form_details_wrapper">
-                    <label for="name">Ism*</label>
-                    <input type="text" id="name" name="name" value="Husanboy">
-
-                    <label for="surname">Familiya*</label>
-                    <input type="text" id="surname" name="surname" value="Zafarov">
-
-                    <label for="phone-number">Telefon raqam*</label>
-                    <div class="form-phone_wrapper">
-                        <span class="form-starting_number">+998 </span>
-                        <input type="text" id="phone-number">
-                    </div>
-                    <button type="submit">Yuborish</button>
-                </div>
-
-                <div class="profile-form_delete profile-form_details_wrapper">
-                    <h1 class="profile-form_delete_heading">
-                        Foydalanuvchi "Husanboy Zafarovni" ochirishni istaysizmi?
-                    </h1>
-                    <div class="profile-form_delete_btn_wrapper">
-                        <span class="profile-form_delete_sure">Ochirish</span>
-                        <span class="profile-form_closer">Bekor qilish</span>
-                    </div>
-                </div>
-
-                <div class="profile-form_message profile-form_details_wrapper">
-                    <textarea placeholder="Habar yozing..." name="profile-izoh" class="profile-izoh"></textarea>
-                    <button type="submit">Yuborish</button>
-                </div>
-
-                <div class="profile-form_modal shadowed">
-                    <div class="profile-form_modal_animation">
-                        <i class="fa-solid fa-triangle-exclamation"></i>
-                        <div class="dot_1 dot"></div>
-                        <div class="dot_2 dot"></div>
-                        <div class="dot_3 dot"></div>
-                        <div class="dot_4 dot"></div>
-                        <div class="dot_5 dot"></div>
-                        <div class="dot_6 dot"></div>
-                        <div class="dot_7 dot"></div>
-                        <div class="dot_8 dot"></div>
-                        <div class="dot_9 dot"></div>
-                        <div class="dot_10 dot"></div>
-                    </div>
-                    <h1 class="profile-form_modal_heading">
-                        Ro'stanham "Husanboy Zafarovni" ochirishni istaysizmi?
-                    </h1>
-                    <p class="profile-form_modal_info_text">Maxsulotlar soni: <span>3</span></p>
-                    <p class="profile-form_modal_info_text">Miqdor: <b>14 858 000</b></p>
-                    <div class="profile-form_delete_btn_wrapper">
-                        <button type="submit">Ochirish</button>
-                        <button type="reset" class="profile-form_undelete">Bekor qilish</button>
-                    </div>
-                </div>
-            </form>
-            <div class="profile-form_bg_closer"></div>
         </div>
     </main>
 
@@ -675,12 +607,106 @@ Tel: +998123456789
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.7/jquery.inputmask.min.js"></script>
-<script src="./assets/js/profile.js"></script>
+<script src="./assets/js/main.js"></script>
 
 <script type="text/javascript">
     $(document).ready(function () {
         $("#phone-number").inputmask("(99) 999-99-99");
     });
 </script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script>
+    new Chart(document.getElementById("pie-chart"), {
+        type: 'pie',
+        data: {
+            labels: ["Schet raqamiga tushgan tushum", "Qarzdorlarning soni", "Naqd olingan pullar"],
+            datasets: [{
+                backgroundColor: ["#5653E9", "#53389E", "#EAABF0"],
+                data: [800, 100, 200]
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: ''
+            },
+            plugins: {
+                legend: {
+                    position: "bottom",
+                }
+            }
+        }
+    });
+
+    new Chart(document.getElementById("pie-chart2"), {
+        type: 'pie',
+        data: {
+            labels: ["Shim", "Koylak", "Galstuk", "Oyoq kiyimlar"],
+            datasets: [{
+                backgroundColor: ["#5754DF", "#5C3BAF", "#D297E8", "#1B1F54"],
+                data: [800, 100, 200, 300]
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: ''
+            },
+            plugins: {
+                legend: {
+                    position: "bottom",
+                }
+            }
+        }
+    });
+
+    new Chart(document.getElementById("pie-chart3"), {
+        type: 'pie',
+        data: {
+            labels: ["Schet raqamiga tushgan tushum", "Qarzdorlarning soni", "Naqd olingan pullar"],
+            datasets: [{
+                backgroundColor: ["#5653E9", "#53389E", "#EAABF0"],
+                data: [800, 100, 200]
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'Mijozlar segmenti'
+            },
+            plugins: {
+                legend: {
+                    position: "bottom",
+                }
+            }
+        }
+    });
+
+    new Chart(document.getElementById("pie-chart4"), {
+        type: 'pie',
+        data: {
+            labels: ["Schet raqamiga tushgan tushum", "Qarzdorlarning soni", "Naqd olingan pullar"],
+            datasets: [{
+                backgroundColor: ["#5653E9", "#53389E", "#EAABF0"],
+                data: [800, 100, 200]
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'Harajatlar'
+            },
+            plugins: {
+                legend: {
+                    position: "bottom",
+                }
+            }
+        }
+    });
+</script>
+
+<script src="./assets/lib/js/datepicker.js"></script>
+<script src="./assets/js/stats.js"></script>
 
 </html>
