@@ -16,3 +16,12 @@ filter_opener.addEventListener("click", () => {
     filter_opener.classList.toggle("active")
     filter_opener.parentElement.getBoundingClientRect().width == 74 ? filter_opener.parentElement.style.maxWidth = `100%` : filter_opener.parentElement.style.maxWidth = `74px`
 })
+
+let list_subcat_dropdown = document.querySelectorAll(".leads-list_subcat_dropdown")
+list_subcat_dropdown.forEach(dropdown => {
+    dropdown.addEventListener("click", () => {
+        dropdown.classList.toggle("nonactive")
+        list = dropdown.parentElement.parentElement.nextElementSibling
+        list.getBoundingClientRect().height ? list.style.maxHeight = 0 : list.style.maxHeight = `${list.scrollHeight}px`
+    })
+});
