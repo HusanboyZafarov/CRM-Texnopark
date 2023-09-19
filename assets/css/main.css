@@ -561,3 +561,18 @@ header {
 .header-sidebar_follower.opened {
     left: calc(2% - 4px);
 }
+
+.closer {
+    background: var(--color-dark);
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    opacity: 0.1;
+    height: 100vh;
+}
+
+.closer.opened {
+    left: 0;
+}

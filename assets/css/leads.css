@@ -107,6 +107,7 @@
     flex-direction: column;
     overflow: hidden;
     max-height: 0;
+    z-index: 10;
 }
 
 .leads-search_result_item {
@@ -193,7 +194,9 @@
     top: 74px;
     z-index: 100;
     overflow: hidden;
+    z-index: 10;
     max-height: 0;
+    background: var(--color-white);
 }
 
 .leads-form_btn {
@@ -274,6 +277,7 @@
     display: flex;
     width: 100%;
     overflow-x: auto;
+    align-items: start;
     gap: 20px;
     padding: 20px;
 }
@@ -301,6 +305,7 @@
 }
 
 .leads-block_properer i {
+    cursor: pointer;
     font-size: var(--size-sm-h);
     color: var(--color-main);
 }
@@ -342,7 +347,6 @@
     gap: 10px;
     overflow: auto;
     padding: 10px;
-    height: 56.8vh;
 }
 
 .leads-list_item.shadowed {
@@ -396,6 +400,10 @@
     margin-bottom: 20px;
 }
 
+.leads-list_subcat_wrapper:last-child {
+    margin-bottom: 0;
+}
+
 .leads-list_subcat_wrapper .leads-list_item {
     background: var(--color-white);
 }
@@ -433,3 +441,187 @@
     cursor: pointer;
 }
 
+.leads-block.changed .leads-list_subcat_wrapper {
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+}
+
+.leads-block.changed .leads-list_subcat_heading {
+    display: none;
+}
+
+.leads-block.changed .leads-list_wrapper {
+    overflow: visible;
+    margin-top: 10px;
+    max-height: none !important;
+}
+
+.leads-adding_form {
+    position: fixed;
+    width: 500px;
+    right: -500px;
+    height: 100vh;
+    z-index: 130;
+    top: 0;
+    padding: 20px;
+    box-shadow: var(--main-shadow);
+    background: var(--color-white);
+}
+
+.adding_form.opened {
+    right: 0;
+}
+
+.leads-adding_heading {
+    height: 61px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.leads-adding_heading::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 500px;
+    left: -20px;
+    height: 1px;
+    background: var(--color-gray);
+    bottom: -20px;
+}
+
+.leads-adding_header {
+    font-size: var(--size-l-d);
+}
+
+.leads-adding_closer {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background: var(--color-danger);
+}
+
+.leads-adding_closer i {
+    color: var(--color-white);
+}
+
+.leads-adding_form_cat,
+.leads-adding_form_user {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.leads-adding_form_title label {
+    width: 100%;
+    display: block;
+}
+
+.leads-adding_form_title input {
+    width: 100%;
+    padding: 10px 20px;
+    outline: none;
+    margin-top: 4px;
+    border-radius: 10px;
+    border: 2px solid var(--color-dark-nonactive);
+}
+
+.leads-adding_form_check {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.leads-adding_form_checkbox_wrapper {
+    width: 100%;
+}
+
+.leads-adding_form_cat_select {
+    width: 100%;
+    padding: 10px 20px;
+    outline: none;
+    font-size: 14px;
+    border: 2px solid var(--color-dark-nonactive);
+    border-radius: 10px;
+}
+
+.leads-adding_form_cat_select.noned {
+    display: none;
+}
+
+.leads-adding_form_btn_group {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.leads-adding_form_btn_group button {
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 10px;
+    outline: none;
+    border: 2px solid transparent;
+    color: var(--color-white);
+    cursor: pointer;
+}
+
+.leads-adding_form_btn_group button:first-child {
+    border-color: var(--color-main);
+    background: var(--color-main);
+}
+
+.leads-adding_form_btn_group button:last-child {
+    border-color: var(--color-danger);
+    background: var(--color-danger);
+}
+
+.leads-adding_form_btn_group button:hover {
+    background: var(--color-white);
+}
+
+.leads-adding_form_btn_group button:last-child:hover {
+    color: var(--color-danger);
+}
+
+.leads-adding_form_btn_group button:first-child:hover {
+    color: var(--color-main);
+}
+
+.leads-adding_form_user_number_wrapper {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    border-radius: 10px;
+    border: 2px solid var(--color-dark-nonactive);
+}
+
+.leads-adding_form_user_number_wrapper span {
+    font-size: 14px;
+    margin-right: 8px;
+    position: relative;
+}
+
+.leads-adding_form_user_number_wrapper span::before {
+    height: 36px;
+    width: 2px;
+    background: var(--color-dark-nonactive);
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    display: block;
+}
+
+.leads-adding_form_user_number_wrapper input {
+    margin: 0 0 0 8px;
+    border: none;
+    padding: 10px 0;
+}
