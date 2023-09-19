@@ -470,7 +470,7 @@
     background: var(--color-white);
 }
 
-.adding_form.opened {
+.leads-adding_form.opened {
     right: 0;
 }
 
@@ -624,4 +624,9 @@
     margin: 0 0 0 8px;
     border: none;
     padding: 10px 0;
+}
+
+.leads-adding_form_user.closed,
+.leads-adding_form_cat.closed {
+    display: none;
 }

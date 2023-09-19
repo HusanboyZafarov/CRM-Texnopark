@@ -49,9 +49,28 @@ closer.addEventListener('click', () => {
 let adding_form_user = document.querySelector(".leads-adding_form_user")
 let adding_form_cat = document.querySelector(".leads-adding_form_cat")
 let adding_form_opener = document.querySelectorAll(".adding_form_opener")
+let adding_closer = document.querySelector(".leads-adding_closer")
 adding_form_opener.forEach(element => {
     element.addEventListener("click", () => {
-        let el = document.querySelector(`.leads-adding_form_${}`)
-        element.classList.value.split(" ")[2] == ""
+        adding_form.classList.add("opened")
+        closer.classList.add("opened")
+        if (element.classList.value.split(" ")[2] == "mijoz") {
+            adding_form_user.classList.remove("closed")
+            adding_form_cat.classList.add("closed")
+        } else {
+            adding_form_user.classList.add("closed")
+            adding_form_cat.classList.remove("closed")
+        }
     })
 });
+
+adding_closer.addEventListener("click", () => {
+    adding_form.classList.remove("opened")
+    closer.classList.remove("opened")
+})
+
+let adding_form_btn_group = document.querySelector(".leads-adding_form_btn_group button:last-child")
+adding_form_btn_group.addEventListener("click", () => {
+    closer.classList.remove("opened")
+    adding_form.classList.remove("opened")
+})
