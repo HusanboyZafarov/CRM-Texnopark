@@ -74,3 +74,6 @@ adding_form_btn_group.addEventListener("click", () => {
     closer.classList.remove("opened")
     adding_form.classList.remove("opened")
 })
+
+
+
