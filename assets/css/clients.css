@@ -147,3 +147,83 @@
 .clients-top_info_item.komment {
     color: var(--color-dark);
 }
+
+.clients-list_pagination_wrapp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.clients-list_pagination_links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.clients-list_pagination_link a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--color-main);
+}
+
+.clients-list_pagination_link a:hover {
+    background: var(--color-main);
+    color: var(--color-white);
+}
+
+.clients-list_pagination_link.btn:hover a {
+    background: var(--color-white);
+}
+
+.clients-list_pagination_link.btn a {
+    background: var(--color-main);
+}
+
+.clients-list_pagination_link.btn:hover a i {
+    color: var(--color-main);
+}
+
+.clients-list_pagination_link.disabled {
+    display: none;
+}
+
+.clients-list_pagination_link.active a {
+    cursor: not-allowed;
+}
+
+.clients-list_pagination_link.active a {
+    color: var(--color-white);
+    background: var(--color-main);
+}
+
+.clients-list_pagination_link.btn i {
+    color: var(--color-white);
+}
+
+.clients-list_download {
+    width: 40px;
+    height: 40px;
+    background: var(--color-main);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--color-main);
+}
+
+.clients-list_download i {
+    color: var(--color-white);
+}
+
+.clients-list_download:hover {
+    background: var(--color-white);
+}
+
+.clients-list_download:hover i {
+    color: var(--color-main);
+}
