@@ -149,3 +149,27 @@ window.addEventListener("load", () => {
         follower.classList.add("opened")
     }, 500);
 })
+
+let adding_header = document.querySelector(".adding_header")
+
+let form_download_opener = document.querySelector(".form_download_opener")
+
+let form_download_links = document.querySelector(".form_download_links")
+if (form_download_links) {
+    form_download_opener.addEventListener("click", () => {
+        form_download_links.getBoundingClientRect().height ? form_download_links.style.maxHeight = 0 : form_download_links.style.maxHeight = `${form_download_links.scrollHeight}px`
+    })
+}
+
+let filter_opener = document.querySelector(".filter_opener")
+filter_opener.addEventListener("click", () => {
+
+    filter_opener.parentElement.getBoundingClientRect().width == 74 ? filter_opener.parentElement.style.maxWidth = `${filter_opener.parentElement.scrollWidth + 20}px` : filter_opener.parentElement.style.maxWidth = `74px`
+    filter_opener.parentElement.getBoundingClientRect().width == 74 ? filter_opener.classList.add("active") : filter_opener.classList.remove("active")
+})
+
+let filter_closer = document.querySelector(".filter_closer")
+filter_closer.addEventListener("click", () => {
+    filter_opener.classList.toggle("active")
+    filter_opener.parentElement.getBoundingClientRect().width == 74 ? filter_opener.parentElement.style.maxWidth = `${filter_opener.parentElement.scrollWidth + 20}px` : filter_opener.parentElement.style.maxWidth = `74px`
+})
