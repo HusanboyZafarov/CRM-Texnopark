@@ -1,8 +1,5 @@
 let search_input = document.querySelector("#query_s")
-let search_result_list = document.querySelector(".leads-search_result_list")
-search_input.addEventListener("keyup", () => {
-    !search_input.value ? search_result_list.style.maxHeight = 0 : search_result_list.style.maxHeight = `${search_result_list.scrollHeight}px`
-})
+let adding_header = document.querySelector(".leads-adding_header")
 
 let form_download_opener = document.querySelector(".leads-form_download_opener")
 
@@ -14,7 +11,13 @@ form_download_opener.addEventListener("click", () => {
 let filter_opener = document.querySelector(".leads-filter_opener")
 filter_opener.addEventListener("click", () => {
     filter_opener.classList.toggle("active")
-    filter_opener.parentElement.getBoundingClientRect().width == 74 ? filter_opener.parentElement.style.maxWidth = `100%` : filter_opener.parentElement.style.maxWidth = `74px`
+    filter_opener.parentElement.getBoundingClientRect().width == 74 ? filter_opener.parentElement.style.maxWidth = `${filter_opener.parentElement.scrollWidth + 20}px` : filter_opener.parentElement.style.maxWidth = `74px`
+})
+
+let filter_closer = document.querySelector(".leads-filter_closer")
+filter_closer.addEventListener("click", () => {
+    filter_opener.classList.toggle("active")
+    filter_opener.parentElement.getBoundingClientRect().width == 74 ? filter_opener.parentElement.style.maxWidth = `${filter_opener.parentElement.scrollWidth + 20}px` : filter_opener.parentElement.style.maxWidth = `74px`
 })
 
 let list_subcat_dropdown = document.querySelectorAll(".leads-list_subcat_dropdown")
@@ -57,8 +60,10 @@ adding_form_opener.forEach(element => {
         if (element.classList.value.split(" ")[2] == "mijoz") {
             adding_form_user.classList.remove("closed")
             adding_form_cat.classList.add("closed")
+            adding_header.textContent = "Yangi mijoz qo'shish"
         } else {
             adding_form_user.classList.add("closed")
+            adding_header.textContent = "Yangi kategoriya qo'shish"
             adding_form_cat.classList.remove("closed")
         }
     })
@@ -75,5 +80,35 @@ adding_form_btn_group.addEventListener("click", () => {
     adding_form.classList.remove("opened")
 })
 
+let list_subcat_settings = document.querySelectorAll(".leads-list_subcat_setting")
 
+list_subcat_settings.forEach(setting => {
+    setting.addEventListener("click", () => {
+        let adding_form_title = document.querySelector(".leads-adding_form_title input")
+        adding_form.classList.add("opened")
+        adding_form_cat.classList.remove("closed")
+        adding_form_user.classList.add("closed")
+        adding_header.textContent = "O'zgartitish"
+        closer.classList.add("opened")
 
+        r_text = ""
+        setting.parentElement.previousElementSibling.textContent.split(" ").forEach(element => {
+            element ? r_text += `${element} ` : element
+            checkbox = document.querySelector(".leads-adding_form_checkbox")
+            checkbox.checked = true
+            checkbox.checked ? adding_form_checkbox_wrapper.nextElementSibling.classList.remove("noned") : adding_form_checkbox_wrapper.nextElementSibling.classList.add("noned")
+        });
+        adding_form_title.value = r_text
+    })
+});
+
+let list_item_alter = document.querySelectorAll(".leads-list_item_alter")
+list_item_alter.forEach(setting => {
+    setting.addEventListener("click", () => {
+        adding_form.classList.add("opened")
+        adding_form_cat.classList.add("closed")
+        adding_form_user.classList.remove("closed")
+        adding_header.textContent = "O'zgartitish"
+        closer.classList.add("opened")
+    })
+});

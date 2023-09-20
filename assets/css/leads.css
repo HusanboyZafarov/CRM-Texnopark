@@ -34,6 +34,20 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    overflow: hidden;
+    max-width: 74px;
+}
+
+.leads-form .adding_form_opener.cat {
+    padding: 10px 20px;
+    height: 54px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
+    color: var(--color-main);
 }
 
 .leads-form_input_wrapper select {
@@ -95,19 +109,6 @@
 .leads-form_input_wrapper button i {
     color: var(--color-white);
     font-size: var(--size-sm-text);
-}
-
-.leads-search_result_list {
-    position: absolute;
-    top: 74px;
-    left: 0;
-    width: 100%;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    max-height: 0;
-    z-index: 10;
 }
 
 .leads-search_result_item {
@@ -191,7 +192,8 @@
     position: absolute;
     display: flex;
     flex-direction: column;
-    top: 74px;
+    top: 130px;
+    left: 1280px;
     z-index: 100;
     overflow: hidden;
     z-index: 10;
@@ -317,6 +319,10 @@
     align-items: self-start;
 }
 
+.leads-list_item.dragging {
+    opacity: 0.5;
+}
+
 .leads-object_adder {
     margin-bottom: 10px;
     width: 100%;
@@ -345,7 +351,6 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    overflow: auto;
     padding: 20px;
 }
 
@@ -435,6 +440,10 @@
 
 .leads-list_subcat_dropdown.nonactive i {
     transform: rotate(180deg);
+}
+
+.leads-list_subcat_dropdown.noned {
+    display: none;
 }
 
 .leads-list_subcat_settings span {
@@ -629,4 +638,10 @@
 .leads-adding_form_user.closed,
 .leads-adding_form_cat.closed {
     display: none;
+}
+
+.leads-list_wrapper.alone {
+    overflow: visible;
+    height: 50px;
+    min-height: 50px;
 }
