@@ -19,7 +19,8 @@
     --color-white: #FFF;
     --color-dark: #3A3A3A;
     --color-dark-nonactive: #3A3A3A50;
-    --color-gray: #C4C4C4;
+    --color-gray: #868484;
+    --color-light-gray: #D9D9D9;
     /* --color-warn: #FEEA00; */
     --color-warn: #ffd60a;
     --color-success: #468d1d;
@@ -37,10 +38,10 @@
     --size-m-h: 30px;
     --size-l-h: 40px;
 
-    /* --bg-profile: #F8FAFF; */
-    --bg-profile: #cdd8f5;
-    --profile-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    --profile-shadow-h: rgba(133, 133, 133, 0.1) 0px 8px 24px;
+    /* --bg-main: #F8FAFF; */
+    --bg-main: #cdd8f5;
+    --main-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    --main-shadow-h: rgba(133, 133, 133, 0.1) 0px 8px 24px;
 }
 
 * {
@@ -159,7 +160,7 @@ header {
     border-radius: 10px;
     display: flex;
     align-items: center;
-    background: var(--bg-profile);
+    background: var(--bg-main);
     border: 1px solid var(--color-gray);
 }
 
@@ -169,7 +170,7 @@ header {
     border: none;
     width: 120px;
     outline: none;
-    background: var(--bg-profile);
+    background: var(--bg-main);
 }
 
 .header-currency_input div {
@@ -342,7 +343,7 @@ header {
 
 .header-currency_current_lang:hover,
 .header-currency_lang_item:hover a {
-    background: var(--bg-profile);
+    background: var(--bg-main);
 }
 
 .header-currency_current_lang.changed {
@@ -394,7 +395,7 @@ header {
     position: fixed;
     height: 100vh;
     width: 30%;
-    background: var(--bg-profile);
+    background: var(--bg-main);
     top: 0;
     right: -100%;
     padding: 105px 5px 10px 10px;
@@ -413,7 +414,7 @@ header {
     content: "";
     width: 0px;
     height: 101px;
-    background: var(--bg-profile);
+    background: var(--bg-main);
     top: 0;
     right: -100%;
     transition: all 0.5s ease;
@@ -534,11 +535,13 @@ header {
     border-right: 1px solid var(--color-gray);
 }
 
-.header-sidebar_item a {
+.header-sidebar_item a,
+.header-sidebar_item span {
     padding: 10px 0;
     display: block;
     position: relative;
     z-index: 10;
+    cursor: pointer;
     color: var(--color-main);
     font-size: var(--size-sm-d);
 }
@@ -548,7 +551,7 @@ header {
 }
 
 .header-sidebar_follower {
-    background: var(--bg-profile);
+    background: var(--bg-main);
     position: fixed;
     top: 0;
     left: 0;

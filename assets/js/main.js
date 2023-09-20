@@ -148,5 +148,4 @@ window.addEventListener("load", () => {
     setTimeout(() => {
         follower.classList.add("opened")
     }, 500);
-
 })
