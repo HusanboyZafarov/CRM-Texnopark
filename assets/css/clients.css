@@ -1,5 +1,5 @@
 :root {
-    /* --color-main: #1B1F54; */
+    --color-main: #1B1F54;
     --color-main: #4d4aea;
     --color-violet: #4d4aea;
     --color-white: #FFF;
@@ -90,7 +90,7 @@
     align-items: center;
 }
 
-.clients-top_info_list::before {
+.clients-top_info_item.index::before {
     position: absolute;
     display: block;
     content: "";
@@ -98,11 +98,12 @@
     height: 2px;
     bottom: -20px;
     left: 0;
+    z-index: -1000;
     background: var(--color-dark);
 }
 
 .clients-top_info_item a {
-    color: var(--color-violet);
+    color: var(--color-main);
     font-size: var(--size-sm-d);
 }
 
@@ -168,6 +169,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--color-main);
     border: 2px solid var(--color-main);
 }
 
@@ -226,4 +228,456 @@
 
 .clients-list_download:hover i {
     color: var(--color-main);
+}
+
+.clients-top_info_item.settings {
+    font-size: var(--size-m-h);
+    color: var(--color-dark);
+    cursor: pointer;
+    margin-right: 8px;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+.clients-top_info_item.settings_wrapper {
+    position: absolute;
+    opacity: 0;
+    right: 32px;
+    display: flex;
+    z-index: 120;
+}
+
+.clients-top_info_item.settings_wrapper.noned {
+    display: none;
+}
+
+.clients-top_info_item.settings_wrapper.opened {
+    opacity: 1;
+}
+
+.clients-top_info_item.settings_wrapper::after {
+    position: absolute;
+    display: block;
+    content: "";
+    height: 44px;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    width: 1px;
+    background: var(--color-dark-nonactive);
+}
+
+.clients-top_info_item.delete,
+.clients-top_info_item.update {
+    cursor: pointer;
+    padding: 10px;
+    display: block;
+    border-radius: 10px 0 0 10px;
+}
+
+.clients-top_info_item.delete {
+    border-radius: 0 10px 10px 0;
+}
+
+.clients-top_info_item.update:hover {
+    background: var(--color-violet);
+}
+
+.clients-top_info_item.delete:hover {
+    background: var(--color-danger);
+}
+
+.clients-top_info_item.update:hover i,
+.clients-top_info_item.delete:hover i {
+    color: var(--color-white);
+}
+
+.clients-top_info_item.delete i {
+    color: var(--color-danger);
+    font-size: var(--size-sm-d);
+}
+
+.clients-top_info_item.update i {
+    color: var(--color-violet);
+    font-size: var(--size-sm-d);
+}
+
+.clients-top_info_item.settings.active {
+    background: var(--color-main);
+
+}
+
+.clients-top_info_item.settings.active i {
+    color: var(--color-white);
+}
+
+.clients-form {
+    width: 500px;
+    position: fixed;
+    top: 0;
+    right: -500px;
+    height: 100vh;
+    z-index: 140;
+    padding: 20px;
+    background: var(--color-white);
+}
+
+.clients-form.opened {
+    right: 0;
+}
+
+.clients-adding_heading {
+    position: relative;
+    height: 61px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.clients-adding_heading::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 500px;
+    left: -20px;
+    height: 1px;
+    background: var(--color-gray);
+    bottom: -20px;
+}
+
+.clients-adding_closer {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    background: var(--color-danger);
+}
+
+.clients-adding_closer i {
+    color: var(--color-white);
+}
+
+.clients-adding_header {
+    font-size: var(--size-l-d);
+}
+
+.clients-adding_form_wrapper {
+    margin-top: 40px;
+}
+
+.clients-adding_form_btn_group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.clients-adding_form_btn_group button {
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    color: var(--color-white);
+    cursor: pointer;
+}
+
+.clients-adding_form_btn_group button:first-child {
+    background: var(--color-main);
+}
+
+.clients-adding_form_btn_group button:first-child:hover {
+    background: var(--color-white);
+    color: var(--color-main);
+    border-color: var(--color-main);
+}
+
+.clients-adding_form_btn_group button:last-child {
+    background: var(--color-danger);
+}
+
+.clients-adding_form_btn_group button:last-child:hover {
+    background: var(--color-white);
+    color: var(--color-danger);
+    border-color: var(--color-danger);
+}
+
+.clients-adding_input_wrapper label {
+    display: block;
+    font-size: var(--size-m-text);
+    color: var(--color-dark);
+    margin-bottom: 4px;
+    margin-top: 10px;
+}
+
+.clients-adding_input_wrapper input {
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 10px;
+    outline: none;
+    border: 2px solid var(--color-dark-nonactive);
+}
+
+.clients-adding_input_wrapper textarea {
+    resize: vertical;
+    min-width: 100%;
+    min-height: 50px;
+    max-height: 200px;
+    border-radius: 10px;
+    padding: 10px 20px;
+    outline: none;
+    border: 2px solid var(--color-dark-nonactive);
+}
+
+.clients-adding_number_wrapper {
+    display: flex;
+    align-items: center;
+    border: 2px solid var(--color-dark-nonactive);
+    padding: 0 10px;
+    border-radius: 10px;
+}
+
+.clients-adding_number_wrapper input {
+    border: none;
+}
+
+.clients-adding_number_wrapper span {
+    position: relative;
+    color: var(--color-dark);
+}
+
+.clients-adding_number_wrapper span::before {
+    position: absolute;
+    display: block;
+    content: "";
+    height: 36px;
+    width: 2px;
+    top: -9px;
+    right: -10px;
+    background: var(--color-dark-nonactive);
+}
+
+.clients-form_modal {
+    width: 400px;
+    position: fixed;
+    padding: 20px;
+    top: -280px;
+    left: 50%;
+    padding-top: 80px;
+    background: var(--color-white);
+    box-shadow: var(--clients-shadow);
+    transform: translate(-50%, -50%);
+}
+
+.clients-form_modal.opened {
+    top: 350px;
+}
+
+.clients-form_modal_info_text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.clients-form_modal_heading {
+    font-size: var(--size-m-d);
+    margin-bottom: 20px;
+    text-align: center;
+    color: var(--color-dark);
+}
+
+.clients-form_modal p {
+    margin-top: 10px;
+    color: var(--color-dark);
+    font-size: var(--size-md-text);
+}
+
+.clients-form_modal .clients-form_delete_btn_wrapper {
+    margin-top: 20px;
+}
+
+.clients-form_modal .clients-form_delete_btn_wrapper button:nth-child(1) {
+    border-color: var(--color-danger);
+    color: var(--color-white);
+    background: var(--color-danger);
+}
+
+.clients-form_modal .clients-form_delete_btn_wrapper button:nth-child(1):hover {
+    color: var(--color-danger);
+    background: var(--color-white);
+}
+
+.clients-form_modal_animation {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 4px solid var(--color-danger);
+    left: 50%;
+    top: -50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: var(--color-danger);
+    font-size: 40px;
+    transform: translateX(-50%);
+}
+
+.clients-form_delete_btn_wrapper {
+    gap: 20px;
+    flex-wrap: nowrap !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.clients-form_delete_btn_wrapper button {
+    width: 100%;
+    padding: 10px 20px;
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    color: var(--color-white);
+}
+
+.clients-form_delete_btn_wrapper button:nth-child(1),
+.clients-form_delete_btn_wrapper span:nth-child(1) {
+    border-color: var(--color-danger);
+    background: var(--color-danger);
+    color: var(--color-dark);
+}
+
+.clients-form_delete_btn_wrapper button:nth-child(1):hover,
+.clients-form_delete_btn_wrapper span:nth-child(1):hover {
+    border-color: var(--color-danger);
+    color: var(--color-danger);
+    background: var(--color-white);
+}
+
+.clients-form_delete_btn_wrapper button:nth-child(2),
+.clients-form_delete_btn_wrapper span:nth-child(2) {
+    border-color: var(--color-success);
+    background: var(--color-success);
+}
+
+.clients-form_delete_btn_wrapper button:nth-child(2):hover,
+.clients-form_delete_btn_wrapper span:nth-child(2):hover {
+    border-color: var(--color-success);
+    color: var(--color-success);
+    background: var(--color-white);
+}
+
+.dot {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: var(--color-danger);
+    clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+    animation: dot_1 2s linear 0s infinite;
+    opacity: 0;
+}
+
+.dot_1 {
+    left: 0;
+    animation: dot_1 2s linear 0s infinite;
+}
+
+.dot_2 {
+    left: 10px;
+    animation: dot_1 1s linear 2s infinite;
+}
+
+.dot_3 {
+    left: 20px;
+    animation: dot_1 3s linear 3s infinite;
+}
+
+.dot_4 {
+    left: 30px;
+    animation: dot_1 2s linear 4s infinite;
+}
+
+.dot_5 {
+    animation: dot_1 2s linear 5s infinite;
+    left: 40px;
+}
+
+.dot_6 {
+    animation: dot_1 2s linear 3.5s infinite;
+    left: 50px;
+}
+
+.dot_7 {
+    animation: dot_1 2s linear 2.5s infinite;
+    left: 60px;
+}
+
+.dot_8 {
+    animation: dot_1 4s linear 0.5s infinite;
+    left: 70px;
+}
+
+.dot_9 {
+    animation: dot_1 1s linear 1s infinite;
+    left: 80px;
+}
+
+.dot_10 {
+    animation: dot_1 2s linear 0s infinite;
+    left: 90px;
+}
+
+@keyframes dot_1 {
+    0% {
+        top: 100px;
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.5;
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0;
+        top: 0px;
+    }
+}
+
+.clients-form_delete_btn_wrapper {
+    position: relative;
+}
+
+.clients-form_delete_wait {
+    position: absolute;
+    width: calc(50% - 10px);
+    display: flex;
+    height: 40px;
+    border-radius: 10px;
+    color: var(--color-white);
+    font-size: var(--size-sm-h);
+    background: #0009;
+    justify-content: center;
+    align-items: center;
+}
+
+.clients-form_delete_wait.noned {
+    display: none;
 }

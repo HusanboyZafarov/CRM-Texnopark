@@ -706,6 +706,11 @@
     transform: translateX(-50%);
 }
 
+.clients-form_delete_btn_wrapper button {
+    width: 100% !important;
+    display: block;
+}
+
 .dot {
     position: absolute;
     width: 10px;
@@ -793,4 +798,3 @@
         top: 0px;
     }
 }
-
