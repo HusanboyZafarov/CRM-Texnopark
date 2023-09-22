@@ -15,7 +15,9 @@
     <!-- Links -->
     <link rel="stylesheet" href="../assets/main-css/root.css">
     <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/barn.css">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css">
+
 
     <link rel="stylesheet" href="./assets/lib/css/datepicker.material.css">
     <title>Moliya</title>
@@ -390,7 +392,7 @@
                             Mijozlar
                         </a>
                     </li>
-                    <li class="header-sidebar_item active">
+                    <li class="header-sidebar_item">
                         <span>
                             <i class="fas fa-wallet"></i>
                             Moliya
@@ -408,7 +410,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="header-sidebar_item">
+                    <li class="header-sidebar_item active">
                         <a href="#">
                             <i class="fas fa-box"></i>
                             Ombor
@@ -433,7 +435,7 @@
     </header>
 
     <main>
-        <div class="finance">
+        <div class="barn">
             <div class="section-wrapp">
                 <div class="container">
                     <div class="inner-wrapper">
@@ -448,7 +450,8 @@
                                             <label for="finance-form_datetime_start">
                                                 <i class="fa-solid fa-calendar-days"></i>
                                             </label>
-                                            <input type="text" id="finance-form_datetime_start" class="time_input">
+                                            <input type="text" id="finance-form_datetime_start" class="time_input"
+                                                placeholder="Sana">
                                             <label for="finance-form_datetime_start">
                                                 <i class="fa-solid fa-chevron-down"></i>
                                             </label>
@@ -460,7 +463,8 @@
                                             <label for="finance-form_datetime_end">
                                                 <i class="fa-solid fa-calendar-days"></i>
                                             </label>
-                                            <input type="text" id="finance-form_datetime_end" class="time_input">
+                                            <input type="text" id="finance-form_datetime_end" class="time_input"
+                                                placeholder="Sana">
                                             <label for="finance-form_datetime_end">
                                                 <i class="fa-solid fa-chevron-down"></i>
                                             </label>
@@ -509,7 +513,7 @@
 
                         <div class="list-wrapper shadowed">
                             <div class="list-top_heading">
-                                <h1 class="list-top_header">To‘lovlar</h1>
+                                <h1 class="list-top_header">Mahsulotlar</h1>
                                 <form action="" class="list-top_form">
                                     <div class="list-detail_wrapper">
                                         <i class="fa-solid fa-magnifying-glass"></i>
@@ -523,114 +527,48 @@
                                 </form>
                             </div>
 
-                            <div class="list-main">
+                            <div class="list-main barn">
                                 <ul class="list-top_info">
-                                    <li class="list-top_info_item name">Ism</li>
-                                    <li class="list-top_info_item quantity">Summa</li>
-                                    <li class="list-top_info_item product">Mahsulot</li>
-                                    <li class="list-top_info_item employee">Hodim</li>
-                                    <li class="list-top_info_item date">Sana</li>
-                                    <li class="list-top_info_item comment">Izoh</li>
-                                    <li class="list-top_info_item id">To‘lov ID</li>
+                                    <li class="list-top_info_item name">Nomi</li>
+                                    <li class="list-top_info_item type">Turi</li>
+                                    <li class="list-top_info_item quantity">Miqdor</li>
+                                    <li class="list-top_info_item expiring">Amal qilish muddati</li>
+                                    <li class="list-top_info_item id">Shtrix</li>
                                 </ul>
                                 <ul class="list-info shadowed">
-                                    <li class="list-info_item name">1. Akramov Abduvali</li>
-                                    <li class="list-info_item quantity">15,3 mln</li>
-                                    <li class="list-info_item product">Web camera</li>
-                                    <li class="list-info_item employee">A.To’rayev</li>
-                                    <li class="list-info_item date">31.08.2023</li>
-                                    <li class="list-info_item comment">Lorem ipsum</li>
-                                    <li class="list-info_item id">#12345678</li>
+                                    <li class="list-info_item name">1. IPhone 15 Pro Max</li>
+                                    <li class="list-info_item type">Smartfon</li>
+                                    <li class="list-info_item quantity">1500</li>
+                                    <li class="list-info_item expiring">30.08.2050</li>
+                                    <li class="list-info_item id">#25488662</li>
                                 </ul>
                                 <ul class="list-info shadowed">
-                                    <li class="list-info_item name">1. Akramov Abduvali</li>
-                                    <li class="list-info_item quantity">15,3 mln</li>
-                                    <li class="list-info_item product">Web camera</li>
-                                    <li class="list-info_item employee">A.To’rayev</li>
-                                    <li class="list-info_item date">31.08.2023</li>
-                                    <li class="list-info_item comment">Lorem ipsum</li>
-                                    <li class="list-info_item id">#12345678</li>
+                                    <li class="list-info_item name">1. Redmi 12T</li>
+                                    <li class="list-info_item type">Smartfon</li>
+                                    <li class="list-info_item quantity">250</li>
+                                    <li class="list-info_item expiring">30.08.2050</li>
+                                    <li class="list-info_item id">#25488662</li>
                                 </ul>
                                 <ul class="list-info shadowed">
-                                    <li class="list-info_item name">1. Akramov Abduvali</li>
-                                    <li class="list-info_item quantity">15,3 mln</li>
-                                    <li class="list-info_item product">Web camera</li>
-                                    <li class="list-info_item employee">A.To’rayev</li>
-                                    <li class="list-info_item date">31.08.2023</li>
-                                    <li class="list-info_item comment">Lorem ipsum</li>
-                                    <li class="list-info_item id">#12345678</li>
+                                    <li class="list-info_item name">1. Redmi 12T</li>
+                                    <li class="list-info_item type">Smartfon</li>
+                                    <li class="list-info_item quantity">250</li>
+                                    <li class="list-info_item expiring">30.08.2050</li>
+                                    <li class="list-info_item id">#25488662</li>
                                 </ul>
                                 <ul class="list-info shadowed">
-                                    <li class="list-info_item name">1. Akramov Abduvali</li>
-                                    <li class="list-info_item quantity">15,3 mln</li>
-                                    <li class="list-info_item product">Web camera</li>
-                                    <li class="list-info_item employee">A.To’rayev</li>
-                                    <li class="list-info_item date">31.08.2023</li>
-                                    <li class="list-info_item comment">Lorem ipsum</li>
-                                    <li class="list-info_item id">#12345678</li>
+                                    <li class="list-info_item name">1. Redmi 12T</li>
+                                    <li class="list-info_item type">Smartfon</li>
+                                    <li class="list-info_item quantity">250</li>
+                                    <li class="list-info_item expiring">30.08.2050</li>
+                                    <li class="list-info_item id">#25488662</li>
                                 </ul>
                                 <ul class="list-info shadowed">
-                                    <li class="list-info_item name">1. Akramov Abduvali</li>
-                                    <li class="list-info_item quantity">15,3 mln</li>
-                                    <li class="list-info_item product">Web camera</li>
-                                    <li class="list-info_item employee">A.To’rayev</li>
-                                    <li class="list-info_item date">31.08.2023</li>
-                                    <li class="list-info_item comment">Lorem ipsum</li>
-                                    <li class="list-info_item id">#12345678</li>
-                                </ul>
-                                <ul class="list-info shadowed">
-                                    <li class="list-info_item name">1. Akramov Abduvali</li>
-                                    <li class="list-info_item quantity">15,3 mln</li>
-                                    <li class="list-info_item product">Web camera</li>
-                                    <li class="list-info_item employee">A.To’rayev</li>
-                                    <li class="list-info_item date">31.08.2023</li>
-                                    <li class="list-info_item comment">Lorem ipsum</li>
-                                    <li class="list-info_item id">#12345678</li>
-                                </ul>
-                                <ul class="list-info shadowed">
-                                    <li class="list-info_item name">1. Akramov Abduvali</li>
-                                    <li class="list-info_item quantity">15,3 mln</li>
-                                    <li class="list-info_item product">Web camera</li>
-                                    <li class="list-info_item employee">A.To’rayev</li>
-                                    <li class="list-info_item date">31.08.2023</li>
-                                    <li class="list-info_item comment">Lorem ipsum</li>
-                                    <li class="list-info_item id">#12345678</li>
-                                </ul>
-                                <ul class="list-info shadowed">
-                                    <li class="list-info_item name">1. Akramov Abduvali</li>
-                                    <li class="list-info_item quantity">15,3 mln</li>
-                                    <li class="list-info_item product">Web camera</li>
-                                    <li class="list-info_item employee">A.To’rayev</li>
-                                    <li class="list-info_item date">31.08.2023</li>
-                                    <li class="list-info_item comment">Lorem ipsum</li>
-                                    <li class="list-info_item id">#12345678</li>
-                                </ul>
-                                <ul class="list-info shadowed">
-                                    <li class="list-info_item name">1. Akramov Abduvali</li>
-                                    <li class="list-info_item quantity">15,3 mln</li>
-                                    <li class="list-info_item product">Web camera</li>
-                                    <li class="list-info_item employee">A.To’rayev</li>
-                                    <li class="list-info_item date">31.08.2023</li>
-                                    <li class="list-info_item comment">Lorem ipsum</li>
-                                    <li class="list-info_item id">#12345678</li>
-                                </ul>
-                                <ul class="list-info shadowed">
-                                    <li class="list-info_item name">1. Akramov Abduvali</li>
-                                    <li class="list-info_item quantity">15,3 mln</li>
-                                    <li class="list-info_item product">Web camera</li>
-                                    <li class="list-info_item employee">A.To’rayev</li>
-                                    <li class="list-info_item date">31.08.2023</li>
-                                    <li class="list-info_item comment">Lorem ipsum</li>
-                                    <li class="list-info_item id">#12345678</li>
-                                </ul>
-                                <ul class="list-info shadowed">
-                                    <li class="list-info_item name">1. Akramov Abduvali</li>
-                                    <li class="list-info_item quantity">15,3 mln</li>
-                                    <li class="list-info_item product">Web camera</li>
-                                    <li class="list-info_item employee">A.To’rayev</li>
-                                    <li class="list-info_item date">31.08.2023</li>
-                                    <li class="list-info_item comment">Lorem ipsum</li>
-                                    <li class="list-info_item id">#12345678</li>
+                                    <li class="list-info_item name">1. Redmi 12T</li>
+                                    <li class="list-info_item type">Smartfon</li>
+                                    <li class="list-info_item quantity">250</li>
+                                    <li class="list-info_item expiring">30.08.2050</li>
+                                    <li class="list-info_item id">#25488662</li>
                                 </ul>
 
                                 <div class="list-pagination_wrapper">

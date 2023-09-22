@@ -1,0 +1,15 @@
+.list-main.barn .list-top_info_item.name,
+.list-main.barn .list-info_item.name {
+    width: 20%;
+}
+
+.list-main.barn .list-top_info_item.quantity,
+.list-main.barn .list-top_info_item.expiring,
+.list-main.barn .list-top_info_item.id,
+.list-main.barn .list-top_info_item.type,
+.list-main.barn .list-info_item.quantity,
+.list-main.barn .list-info_item.expiring,
+.list-main.barn .list-info_item.id,
+.list-main.barn .list-info_item.type {
+    width: 14% ;
+}
