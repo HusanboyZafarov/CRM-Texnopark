@@ -1,6 +1,6 @@
 :root {
-    --color-main: #1B1F54;
     --color-main: #4d4aea;
+    --color-main: #1B1F54;
     --color-violet: #4d4aea;
     --color-white: #FFF;
     --color-dark: #3A3A3A;
@@ -672,7 +672,7 @@
     height: 40px;
     border-radius: 10px;
     color: var(--color-white);
-    font-size: var(--size-sm-h);
+    font-size: var(--size-sm-d);
     background: #0009;
     justify-content: center;
     align-items: center;

@@ -2,6 +2,7 @@ let settings = document.querySelectorAll(".clients-top_info_item.settings")
 let clients_form = document.querySelector(".clients-form")
 let clients_adding_closer = document.querySelector(".clients-adding_closer")
 let form_adding_btn = document.querySelector(".form_adding_btn")
+let form_modal = document.querySelector(".clients-form_modal")
 settings.forEach(setting => {
     setting.addEventListener("click", () => {
         setting.classList.toggle("active")
@@ -67,10 +68,7 @@ clients_adding_closer.addEventListener('click', () => {
     clients_form.classList.remove("opened")
 })
 
-closer.addEventListener('click', () => {
-    closer.classList.remove("opened")
-    clients_form.classList.remove("opened")
-})
+
 
 form_adding_btn.addEventListener("click", () => {
     closer.classList.add("opened")
@@ -95,9 +93,33 @@ let item_deletes = document.querySelectorAll(".clients-top_info_item.delete")
 let waiting_sec = document.querySelector(".clients-form_delete_wait")
 item_deletes.forEach(delete_item => {
     delete_item.addEventListener('click', () => {
-        sec = 15
-        setInterval(() => {
-            
-        }, 1000);
+        closer.addEventListener('click', () => {
+            closer.classList.remove("opened")
+            clients_form.classList.remove("opened")
+            form_modal.classList.remove("opened")
+            clearInterval(interval);
+        })
+
+        waiting_sec.classList.remove("noned")
+        let index = 15;
+        closer.classList.add("opened")
+        form_modal.classList.add("opened")
+
+        function lowerIndex() {
+            if (index === 0) {
+                clearInterval(interval);
+                waiting_sec.classList.add("noned")
+            } else {
+                index--;
+            }
+            waiting_sec.textContent = `${index}`
+        }
+        const interval = setInterval(lowerIndex, 1000);
     })
 });
+
+closer.addEventListener('click', () => {
+    closer.classList.remove("opened")
+    clients_form.classList.remove("opened")
+    form_modal.classList.remove("opened")
+})

@@ -3,9 +3,12 @@ sidebar_item_span.addEventListener("click", () => {
     sidebar_item_span.nextElementSibling.classList.toggle("opened")
     console.log(sidebar_item_span.nextElementSibling.style.right);
 
-    if (sidebar_item_span.nextElementSibling.style.right || sidebar_item_span.nextElementSibling.style.right == "0px") {
+    if (sidebar_item_span.nextElementSibling.style.right == "0px") {
         sidebar_item_span.nextElementSibling.style.right = "0px"
     } else {
         sidebar_item_span.nextElementSibling.style.right = `-${sidebar_item_span.style.width + sidebar_item_span.nextElementSibling.getBoundingClientRect().width}px`
     }
 })
+
+var start1 = new Datepicker('#finance-form_datetime_start', {});
+var end1 = new Datepicker('#finance-form_datetime_end', {});

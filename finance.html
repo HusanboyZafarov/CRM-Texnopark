@@ -369,8 +369,6 @@
                         </ul>
                     </div>
                 </div>
-
-
             </div>
 
             <div class="header-sidebar">
@@ -381,7 +379,7 @@
                             Statistika
                         </a>
                     </li>
-                    <li class="header-sidebar_item active">
+                    <li class="header-sidebar_item">
                         <a href="#">
                             <i class="fas fa-user"></i>
                             Lidlar
@@ -393,7 +391,7 @@
                             Mijozlar
                         </a>
                     </li>
-                    <li class="header-sidebar_item">
+                    <li class="header-sidebar_item active">
                         <span>
                             <i class="fas fa-wallet"></i>
                             Moliya
@@ -436,6 +434,235 @@
     </header>
 
     <main>
+        <div class="finance">
+            <div class="section-wrapp">
+                <div class="container">
+                    <div class="inner-wrapper">
+                        <div class="form_filter_wrapper">
+                            <div class="form_filter_outer">
+                                <div class="top_filter_wrapper shadowed">
+                                    <div class="filter_opener shadowed">
+                                        <i class="fa-solid fa-filter"></i>
+                                    </div>
+                                    <form action="" class="form_filter">
+                                        <div class="form_input_wrapper shadowed">
+                                            <label for="finance-form_datetime_start">
+                                                <i class="fa-solid fa-calendar-days"></i>
+                                            </label>
+                                            <input type="text" id="finance-form_datetime_start" class="time_input">
+                                            <label for="finance-form_datetime_start">
+                                                <i class="fa-solid fa-chevron-down"></i>
+                                            </label>
+                                        </div>
+                                        <span>
+                                            dan
+                                        </span>
+                                        <div class="form_input_wrapper shadowed">
+                                            <label for="finance-form_datetime_end">
+                                                <i class="fa-solid fa-calendar-days"></i>
+                                            </label>
+                                            <input type="text" id="finance-form_datetime_end" class="time_input">
+                                            <label for="finance-form_datetime_end">
+                                                <i class="fa-solid fa-chevron-down"></i>
+                                            </label>
+                                        </div>
+                                        <span>
+                                            gacha
+                                        </span>
+                                        <div class="form_input_wrapper shadowed">
+                                            <label for="product">
+                                                <i class="fa-solid fa-box-open-full"></i>
+                                            </label>
+                                            <select name="product" id="product">
+                                                <option value="" selected style="display: none;">Mahsulot</option>
+                                                <option value="Husanboy Zafarov">Sement</option>
+                                                <option value="Husanboy Zafarov">Gisht</option>
+                                            </select>
+                                        </div>
+                                        <div class="form_input_wrapper shadowed">
+                                            <label for="product">
+                                                <i class="fa-solid fa-circle-user"></i>
+                                            </label>
+                                            <select name="product" id="product">
+                                                <option value="" selected style="display: none;">Hodim</option>
+                                                <option value="Husanboy Zafarov">Husanboy Zafarov</option>
+                                                <option value="Husanboy Zafarov">Husanboy Zafarov</option>
+                                            </select>
+                                        </div>
+                                        <div class="form_input_wrapper shadowed">
+                                            <label for="product">
+                                                <i class="fa-solid fa-money-bill"></i>
+                                            </label>
+                                            <select name="product" id="product">
+                                                <option value="" selected style="display: none;">To‘lov turi</option>
+                                                <option value="Husanboy Zafarov">Naqd</option>
+                                                <option value="Husanboy Zafarov">Plastik</option>
+                                            </select>
+                                        </div>
+                                        <button type="submit" class="form_btn shadowed">Qidirish</button>
+                                        <span class="filter_closer shadowed">
+                                            <i class="fa-solid fa-xmark"></i>
+                                        </span>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="list-wrapper shadowed">
+                            <div class="list-top_heading">
+                                <h1 class="list-top_header">To‘lovlar</h1>
+                                <form action="" class="list-top_form">
+                                    <div class="list-detail_wrapper">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                        <input type="text" class="list-search_input">
+                                    </div>
+                                    <select name="" id="">
+                                        <option value="">oxirgi 30 kun</option>
+                                        <option value="">oxirgi 2 oy</option>
+                                        <option value="">oxirgi 1 yil</option>
+                                    </select>
+                                </form>
+                            </div>
+
+                            <div class="list-main">
+                                <ul class="list-top_info">
+                                    <li class="list-top_info_item name">Ism</li>
+                                    <li class="list-top_info_item quantity">Summa</li>
+                                    <li class="list-top_info_item product">Mahsulot</li>
+                                    <li class="list-top_info_item employee">Hodim</li>
+                                    <li class="list-top_info_item date">Sana</li>
+                                    <li class="list-top_info_item comment">Izoh</li>
+                                    <li class="list-top_info_item id">To‘lov ID</li>
+                                </ul>
+                                <ul class="list-info shadowed">
+                                    <li class="list-info_item name">1. Akramov Abduvali</li>
+                                    <li class="list-info_item quantity">15,3 mln</li>
+                                    <li class="list-info_item product">Web camera</li>
+                                    <li class="list-info_item employee">A.To’rayev</li>
+                                    <li class="list-info_item date">31.08.2023</li>
+                                    <li class="list-info_item comment">Lorem ipsum</li>
+                                    <li class="list-info_item id">#12345678</li>
+                                </ul>
+                                <ul class="list-info shadowed">
+                                    <li class="list-info_item name">1. Akramov Abduvali</li>
+                                    <li class="list-info_item quantity">15,3 mln</li>
+                                    <li class="list-info_item product">Web camera</li>
+                                    <li class="list-info_item employee">A.To’rayev</li>
+                                    <li class="list-info_item date">31.08.2023</li>
+                                    <li class="list-info_item comment">Lorem ipsum</li>
+                                    <li class="list-info_item id">#12345678</li>
+                                </ul>
+                                <ul class="list-info shadowed">
+                                    <li class="list-info_item name">1. Akramov Abduvali</li>
+                                    <li class="list-info_item quantity">15,3 mln</li>
+                                    <li class="list-info_item product">Web camera</li>
+                                    <li class="list-info_item employee">A.To’rayev</li>
+                                    <li class="list-info_item date">31.08.2023</li>
+                                    <li class="list-info_item comment">Lorem ipsum</li>
+                                    <li class="list-info_item id">#12345678</li>
+                                </ul>
+                                <ul class="list-info shadowed">
+                                    <li class="list-info_item name">1. Akramov Abduvali</li>
+                                    <li class="list-info_item quantity">15,3 mln</li>
+                                    <li class="list-info_item product">Web camera</li>
+                                    <li class="list-info_item employee">A.To’rayev</li>
+                                    <li class="list-info_item date">31.08.2023</li>
+                                    <li class="list-info_item comment">Lorem ipsum</li>
+                                    <li class="list-info_item id">#12345678</li>
+                                </ul>
+                                <ul class="list-info shadowed">
+                                    <li class="list-info_item name">1. Akramov Abduvali</li>
+                                    <li class="list-info_item quantity">15,3 mln</li>
+                                    <li class="list-info_item product">Web camera</li>
+                                    <li class="list-info_item employee">A.To’rayev</li>
+                                    <li class="list-info_item date">31.08.2023</li>
+                                    <li class="list-info_item comment">Lorem ipsum</li>
+                                    <li class="list-info_item id">#12345678</li>
+                                </ul>
+                                <ul class="list-info shadowed">
+                                    <li class="list-info_item name">1. Akramov Abduvali</li>
+                                    <li class="list-info_item quantity">15,3 mln</li>
+                                    <li class="list-info_item product">Web camera</li>
+                                    <li class="list-info_item employee">A.To’rayev</li>
+                                    <li class="list-info_item date">31.08.2023</li>
+                                    <li class="list-info_item comment">Lorem ipsum</li>
+                                    <li class="list-info_item id">#12345678</li>
+                                </ul>
+                                <ul class="list-info shadowed">
+                                    <li class="list-info_item name">1. Akramov Abduvali</li>
+                                    <li class="list-info_item quantity">15,3 mln</li>
+                                    <li class="list-info_item product">Web camera</li>
+                                    <li class="list-info_item employee">A.To’rayev</li>
+                                    <li class="list-info_item date">31.08.2023</li>
+                                    <li class="list-info_item comment">Lorem ipsum</li>
+                                    <li class="list-info_item id">#12345678</li>
+                                </ul>
+                                <ul class="list-info shadowed">
+                                    <li class="list-info_item name">1. Akramov Abduvali</li>
+                                    <li class="list-info_item quantity">15,3 mln</li>
+                                    <li class="list-info_item product">Web camera</li>
+                                    <li class="list-info_item employee">A.To’rayev</li>
+                                    <li class="list-info_item date">31.08.2023</li>
+                                    <li class="list-info_item comment">Lorem ipsum</li>
+                                    <li class="list-info_item id">#12345678</li>
+                                </ul>
+                                <ul class="list-info shadowed">
+                                    <li class="list-info_item name">1. Akramov Abduvali</li>
+                                    <li class="list-info_item quantity">15,3 mln</li>
+                                    <li class="list-info_item product">Web camera</li>
+                                    <li class="list-info_item employee">A.To’rayev</li>
+                                    <li class="list-info_item date">31.08.2023</li>
+                                    <li class="list-info_item comment">Lorem ipsum</li>
+                                    <li class="list-info_item id">#12345678</li>
+                                </ul>
+                                <ul class="list-info shadowed">
+                                    <li class="list-info_item name">1. Akramov Abduvali</li>
+                                    <li class="list-info_item quantity">15,3 mln</li>
+                                    <li class="list-info_item product">Web camera</li>
+                                    <li class="list-info_item employee">A.To’rayev</li>
+                                    <li class="list-info_item date">31.08.2023</li>
+                                    <li class="list-info_item comment">Lorem ipsum</li>
+                                    <li class="list-info_item id">#12345678</li>
+                                </ul>
+                                <ul class="list-info shadowed">
+                                    <li class="list-info_item name">1. Akramov Abduvali</li>
+                                    <li class="list-info_item quantity">15,3 mln</li>
+                                    <li class="list-info_item product">Web camera</li>
+                                    <li class="list-info_item employee">A.To’rayev</li>
+                                    <li class="list-info_item date">31.08.2023</li>
+                                    <li class="list-info_item comment">Lorem ipsum</li>
+                                    <li class="list-info_item id">#12345678</li>
+                                </ul>
+
+                                <div class="list-pagination_wrapper">
+                                    <ul class="list-pagination">
+                                        <li class="list-item_pagination nav">
+                                            <a href="#">
+                                                <i class="fa-solid fa-chevron-left"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-item_pagination">
+                                            <a href="#">1</a>
+                                        </li>
+                                        <li class="list-item_pagination active">
+                                            <a href="#">2</a>
+                                        </li>
+                                        <li class="list-item_pagination">
+                                            <a href="#">3</a>
+                                        </li>
+                                        <li class="list-item_pagination nav">
+                                            <a href="#">
+                                                <i class="fa-solid fa-chevron-right"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </main>
 
@@ -447,8 +674,8 @@
 </body>
 
 <script src="./assets/js/main.js"></script>
+<script src="./assets/lib/js/datepicker.js"></script>
 <script src="./assets/js/finance.js"></script>
 
-<script src="./assets/lib/js/datepicker.js"></script>
 
 </html>
