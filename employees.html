@@ -542,14 +542,26 @@
                                 </div>
 
                                 <div class="employee-input_wrapper">
+                                    <p class="employee-input_gene_title">Jinsi</p>
+                                    <div class="employee-input_radio_wrapper">
+                                        <label for="employee-form_input_erkak">
+                                            <input type="radio" name="gene" id="employee-form_input_erkak">
+                                            Erkak
+                                        </label>
+                                        <label for="employee-form_input_ayol">
+                                            <input type="radio" name="gene" id="employee-form_input_ayol">
+                                            Ayol
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="employee-input_wrapper">
                                     <label for="employee-form_input">Bla bla bla</label>
                                     <select name="employee-form_position" id="employee-form_position">
-
                                         <option value="" selected></option>
                                         <option value="Bo'lim bo'shligi">
                                             Bo'lim bo'shligi
                                         </option>
-
                                         <option value="Kuryer">Kuryer</option>
                                     </select>
                                 </div>
@@ -572,6 +584,15 @@
 
     <div class="closer"></div>
 </body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.7/jquery.inputmask.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#employee-form_number").inputmask("(99) 999-99-99");
+    });
+</script>
 
 <script src="./assets/js/main.js"></script>
 <script src="./assets/lib/js/datepicker.js"></script>

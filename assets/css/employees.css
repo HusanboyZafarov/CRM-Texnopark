@@ -158,3 +158,94 @@
     outline: none;
     font-size: 16px;
 }
+
+.employee-btn_broup {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.employee-btn_broup button,
+.employee-btn_broup span {
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid transparent;
+    font-size: 16px;
+    color: var(--color-white);
+    cursor: pointer;
+}
+
+.employee-btn_broup button {
+    background: var(--color-success);
+    border-color: var(--color-success);
+}
+
+.employee-btn_broup button:hover {
+    background: var(--color-white);
+    color: var(--color-success);
+}
+
+.employee-btn_broup span {
+    background: var(--color-danger);
+    border-color: var(--color-danger);
+}
+
+.employee-btn_broup span:hover {
+    background: var(--color-white);
+    color: var(--color-danger);
+}
+
+.employee-input_wrapper input[name="birth_date"] {
+    width: 100%;
+}
+
+.employee-input_inner_wrapper {
+    border: 2px solid var(--color-dark-nonactive);
+    padding: 0 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.employee-input_inner_wrapper span {
+    color: var(--color-dark);
+    font-size: 16px;
+    position: relative;
+}
+
+.employee-input_inner_wrapper span::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 2px;
+    background: var(--color-dark-nonactive);
+    height: 39px;
+    right: -10px;
+    top: -10px;
+}
+
+.employee-input_inner_wrapper input {
+    width: 100%;
+    border: none;
+}
+
+.employee-input_radio_wrapper {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.employee-input_gene_title {
+    color: var(--color-dark);
+    font-size: 16px;
+}
+
+.employee-input_radio_wrapper label {
+    font-size: 14px;
+}
