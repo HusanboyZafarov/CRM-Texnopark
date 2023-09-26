@@ -44,4 +44,7 @@ function formCloser() {
 let top_adding_product = document.querySelector(".list-top_adding_product")
 top_adding_product.addEventListener("click", () => {
     product_adding.classList.add("opened")
-})
+    activeEls.forEach(element => {
+        element.value = ""
+    });
+})  

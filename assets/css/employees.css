@@ -84,3 +84,58 @@
 .employee-setting.active {
     background: var(--color-dark-nonactive);
 }
+
+.employee-form {
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    z-index: 140;
+    background: var(--color-white);
+    padding: 20px;
+    width: 500px;
+}
+
+.employee-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 61px;
+    position: relative;
+}
+
+.employee-heading::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 500px;
+    left: -20px;
+    height: 1px;
+    background: var(--color-gray);
+    bottom: -20px;
+}
+
+.employee-header {
+    font-size: var(--size-l-d);
+    color: var(--color-dark);
+}
+
+.employee-form_closer {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--color-danger);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.employee-form_closer i {
+    color: var(--color-white);
+}
+
+.employee-form_inner_wrapper {
+    margin-top: 40px;
+}
+
