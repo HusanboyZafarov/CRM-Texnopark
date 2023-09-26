@@ -28,3 +28,59 @@
     --main-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     --main-shadow-h: rgba(133, 133, 133, 0.1) 0px 8px 24px;
 }
+
+.employees-heading {
+    display: flex;
+    align-items: end;
+    color: var(--color-main);
+}
+
+.employees-text {
+    margin-left: 10px;
+    font-size: 18px;
+    margin-bottom: 4px;
+    color: var(--color-dark);
+}
+
+.employees-text i {
+    color: var(--color-main);
+}
+
+.employees-list {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.employee-item {
+    width: 49.3%;
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.employee-item p {
+    color: var(--color-dark);
+}
+
+.employee-item a {
+    color: var(--color-main);
+}
+
+.employee-setting {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.employee-setting.active {
+    background: var(--color-dark-nonactive);
+}
