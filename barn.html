@@ -447,12 +447,12 @@
                                     </div>
                                     <form action="" class="form_filter">
                                         <div class="form_input_wrapper shadowed">
-                                            <label for="finance-form_datetime_start">
+                                            <label for="form_datetime_start">
                                                 <i class="fa-solid fa-calendar-days"></i>
                                             </label>
-                                            <input type="text" id="finance-form_datetime_start" class="time_input"
+                                            <input type="text" id="form_datetime_start" class="time_input"
                                                 placeholder="Sana">
-                                            <label for="finance-form_datetime_start">
+                                            <label for="form_datetime_start">
                                                 <i class="fa-solid fa-chevron-down"></i>
                                             </label>
                                         </div>
@@ -460,12 +460,12 @@
                                             dan
                                         </span>
                                         <div class="form_input_wrapper shadowed">
-                                            <label for="finance-form_datetime_end">
+                                            <label for="form_datetime_end">
                                                 <i class="fa-solid fa-calendar-days"></i>
                                             </label>
-                                            <input type="text" id="finance-form_datetime_end" class="time_input"
+                                            <input type="text" id="form_datetime_end" class="time_input"
                                                 placeholder="Sana">
-                                            <label for="finance-form_datetime_end">
+                                            <label for="form_datetime_end">
                                                 <i class="fa-solid fa-chevron-down"></i>
                                             </label>
                                         </div>
@@ -524,7 +524,9 @@
                                         <option value="">oxirgi 2 oy</option>
                                         <option value="">oxirgi 1 yil</option>
                                     </select>
-                                    <button class="list-top_adding_product">Mahsulot qo'shish</button>
+                                    <span class="list-top_adding_product">
+                                        <i class="fa-regular fa-circle-plus"></i>
+                                        Mahsulot qo'shish</span>
                                 </form>
 
                                 <form action="" class="list-product_adding">
@@ -537,24 +539,43 @@
                                         </span>
                                     </div>
 
-                                    <div class="list-product_adding_input_wrapper">
-                                        <label for="list-product_adding_input">Nomi</label>
-                                        <input type="text" id="list-product_adding_input" name="name">
+                                    <div class="list-product_inner_wrapper">
+                                        <div class="list-product_adding_input_wrapper">
+                                            <label for="list-product_adding_input">Nomi</label>
+                                            <input type="text" id="list-product_adding_input" name="name">
+                                        </div>
+                                        <input type="hidden" name="editing_product_id" id="editing_product_id"
+                                            value="0">
+                                        <div class="list-product_adding_input_wrapper">
+                                            <label for="list-product_adding_select">Turi</label>
+                                            <select name="type" id="list-product_adding_select">
+                                                <option value="" selected style="display: none;"></option>
+                                                <option value="Smartfon">Smartfon</option>
+                                                <option value="Noutbuk">Noutbuk</option>
+                                                <option value="Hardware jismlar">Hardware jismlar</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="list-product_adding_input_wrapper">
+                                            <label for="list-product_adding_quantity">Miqdor</label>
+                                            <input type="number" min="1" id="list-product_adding_quantity"
+                                                name="quantity">
+                                        </div>
+
+                                        <div class="list-product_adding_input_wrapper">
+                                            <label for="list-product_adding_quantity">Amal qilish muddati</label>
+                                            <input type="text" id="list-product_adding_expiring" name="expiring_date">
+                                        </div>
+
+                                        <div class="list-product_adding_input_wrapper">
+                                            <label for="list-product_adding_code">Strix</label>
+                                            <input type="text" id="list-product_adding_code" name="shtrix_code">
+                                        </div>
                                     </div>
 
-                                    <div class="list-product_adding_input_wrapper">
-                                        <label for="list-product_adding_select">Turi</label>
-                                        <select name="type" id="list-product_adding_select"></select>
-                                    </div>
-
-                                    <div class="list-product_adding_input_wrapper">
-                                        <label for="list-product_adding_quantity">Miqdor</label>
-                                        <input type="number" id="list-product_adding_quantity" name="quantity">
-                                    </div>
-
-                                    <div class="list-product_adding_input_wrapper">
-                                        <label for="list-product_adding_code">Strix</label>
-                                        <input type="number" id="list-product_adding_code" name="shtrix_code">
+                                    <div class="list-product_btn_group">
+                                        <button type="submit">Qo'shish</button>
+                                        <span>Bekor qilish</span>
                                     </div>
                                 </form>
                             </div>
@@ -569,6 +590,7 @@
                                 </ul>
                                 <ul class="list-info shadowed">
                                     <li class="list-info_item name">1. IPhone 15 Pro Max</li>
+                                    <li class="list-info_item id_product"><input type="hidden" value="4654654654"></li>
                                     <li class="list-info_item type">Smartfon</li>
                                     <li class="list-info_item quantity">1500</li>
                                     <li class="list-info_item expiring">30.08.2050</li>
@@ -576,6 +598,7 @@
                                 </ul>
                                 <ul class="list-info shadowed">
                                     <li class="list-info_item name">1. Redmi 12T</li>
+                                    <li class="list-info_item id_product"><input type="hidden" value="4654654654"></li>
                                     <li class="list-info_item type">Smartfon</li>
                                     <li class="list-info_item quantity">250</li>
                                     <li class="list-info_item expiring">30.08.2050</li>
@@ -583,6 +606,7 @@
                                 </ul>
                                 <ul class="list-info shadowed">
                                     <li class="list-info_item name">1. Redmi 12T</li>
+                                    <li class="list-info_item id_product"><input type="hidden" value="4654654654"></li>
                                     <li class="list-info_item type">Smartfon</li>
                                     <li class="list-info_item quantity">250</li>
                                     <li class="list-info_item expiring">30.08.2050</li>
@@ -590,6 +614,7 @@
                                 </ul>
                                 <ul class="list-info shadowed">
                                     <li class="list-info_item name">1. Redmi 12T</li>
+                                    <li class="list-info_item id_product"><input type="hidden" value="4654654654"></li>
                                     <li class="list-info_item type">Smartfon</li>
                                     <li class="list-info_item quantity">250</li>
                                     <li class="list-info_item expiring">30.08.2050</li>
@@ -597,6 +622,7 @@
                                 </ul>
                                 <ul class="list-info shadowed">
                                     <li class="list-info_item name">1. Redmi 12T</li>
+                                    <li class="list-info_item id_product"><input type="hidden" value="4654654654"></li>
                                     <li class="list-info_item type">Smartfon</li>
                                     <li class="list-info_item quantity">250</li>
                                     <li class="list-info_item expiring">30.08.2050</li>
@@ -644,7 +670,7 @@
 
 <script src="./assets/js/main.js"></script>
 <script src="./assets/lib/js/datepicker.js"></script>
-<script src="./assets/js/finance.js"></script>
+<script src="./assets/js/barn.js"></script>
 
 
 </html>

@@ -175,14 +175,10 @@ footer p {
     color: var(--color-dark);
 }
 
-
-
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
+header input[type=number]::-webkit-inner-spin-button,
+header input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
 }
-
-
 
 header {
     position: sticky;
@@ -865,6 +861,31 @@ header {
 .list-top_header {
     font-size: var(--size-m-h);
     color: var(--color-dark);
+    display: flex;
+    gap: 10px;
+}
+
+.list-top_header a i {
+    font-size: var(--size-sm-d);
+    color: var(--color-dark);
+}
+
+.list-top_header a:hover {
+    background: var(--color-dark);
+}
+
+.list-top_header a:hover i {
+    color: var(--color-white);
+}
+
+.list-top_header a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--color-dark-nonactive);
 }
 
 .list-detail_wrapper {

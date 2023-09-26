@@ -32,6 +32,7 @@
 .list-main.barn .list-top_info_item.name,
 .list-main.barn .list-info_item.name {
     width: 20%;
+    cursor: pointer;
 }
 
 .list-main.barn .list-top_info_item.quantity,
@@ -48,12 +49,16 @@
 .list-product_adding {
     position: fixed;
     width: 500px;
-    right: 0;
     z-index: 140;
     top: 0;
+    right: -500px;
     padding: 20px;
     height: 100vh;
     background: var(--color-white);
+}
+
+.list-product_adding.opened {
+    right: 0;
 }
 
 .list-product_adding_heading {
@@ -61,6 +66,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .list-product_adding_closer {
@@ -71,4 +77,117 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+}
+
+.list-product_adding_closer i {
+    color: var(--color-white);
+}
+
+.list-product_inner_wrapper {
+    margin-top: 40px;
+}
+
+.list-product_adding_heading::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 500px;
+    left: -20px;
+    height: 1px;
+    background: var(--color-gray);
+    bottom: -20px;
+}
+
+.list-product_adding_input_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 10px;
+}
+
+.list-product_adding_input_wrapper label {
+    color: var(--color-dark);
+    font-size: var(--size-m-text);
+}
+
+.list-product_adding_input_wrapper input,
+.list-product_adding_input_wrapper select {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 2px solid var(--color-dark-nonactive);
+    outline: none;
+    color: var(--color-dark);
+    font-size: 16px;
+}
+
+.list-product_btn_group {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.list-product_btn_group * {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    font-size: 16px;
+    color: var(--color-white);
+    cursor: pointer;
+}
+
+.list-product_adding_header {
+    font-size: var(--size-l-d);
+}
+
+.list-product_btn_group button {
+    border-color: var(--color-success);
+    background: var(--color-success);
+}
+
+.list-product_btn_group span {
+    background: var(--color-danger);
+    border-color: var(--color-danger);
+}
+
+.list-product_btn_group button:hover {
+    color: var(--color-success);
+    background: var(--color-white);
+    border-color: var(--color-success);
+}
+
+.list-product_btn_group span:hover {
+    color: var(--color-danger);
+    background: var(--color-white);
+    border-color: var(--color-danger);
+}
+
+.list-info_item.id_product {
+    display: none;
+}
+
+.list-top_adding_product {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border: 1px solid var(--color-dark);
+    background: var(--bg-main);
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.list-top_adding_product i {
+    color: var(--color-dark);
+    margin-right: 4px;
+}
+
+.list-product_adding_input_wrapper #list-product_adding_expiring {
+    width: 100%;
 }

@@ -150,8 +150,6 @@ window.addEventListener("load", () => {
     }, 500);
 })
 
-let adding_header = document.querySelector(".adding_header")
-
 let form_download_opener = document.querySelector(".form_download_opener")
 
 let form_download_links = document.querySelector(".form_download_links")

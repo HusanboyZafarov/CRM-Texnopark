@@ -6,7 +6,7 @@ list_subcat_dropdown.forEach(dropdown => {
         list.getBoundingClientRect().height ? list.style.maxHeight = 0 : list.style.maxHeight = `${list.scrollHeight}px`
     })
 });
-
+let adding_header = document.querySelector(".leads-adding_header")
 let block_properer = document.querySelectorAll(".leads-block_properer")
 
 block_properer.forEach(changer => {
