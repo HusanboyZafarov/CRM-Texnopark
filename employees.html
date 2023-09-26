@@ -515,22 +515,34 @@
 
                             <div class="employee-form_inner_wrapper">
                                 <div class="employee-input_wrapper">
-                                    <label for="employee-form_input">Ism & Familiya</label>
-                                    <input type="text" name="name" id="employee-form_input">
+                                    <label for="employee-form_input_name">Ism</label>
+                                    <input type="text" name="name" autocomplete="off" id="employee-form_input_name">
+                                </div>
+                                <div class="employee-input_wrapper">
+                                    <label for="employee-form_input_surname">Familiya</label>
+                                    <input type="text" name="surname" autocomplete="off"
+                                        id="employee-form_input_surname">
                                 </div>
 
                                 <input type="hidden" name="editing_employee_id" id="editing_employee_id">
 
                                 <div class="employee-input_wrapper">
-                                    <label for="employee-form_input"></label>
+                                    <label for="employee-form_input">Tel. Raqam</label>
                                     <div class="employee-input_inner_wrapper">
                                         <span>+998</span>
-                                        <input type="text" name="employee-form_number" id="employee-form_number">
+                                        <input type="text" name="employee-form_number" autocomplete="off"
+                                            id="employee-form_number">
                                     </div>
                                 </div>
 
                                 <div class="employee-input_wrapper">
-                                    <label for="employee-form_input">Ism & Familiya</label>
+                                    <label for="employee-form_input_birthdate">Tug‘ilgan sana</label>
+                                    <input type="text" name="birth_date" autocomplete="off"
+                                        id="employee-form_input_birthdate">
+                                </div>
+
+                                <div class="employee-input_wrapper">
+                                    <label for="employee-form_input">Bla bla bla</label>
                                     <select name="employee-form_position" id="employee-form_position">
 
                                         <option value="" selected></option>
@@ -540,6 +552,11 @@
 
                                         <option value="Kuryer">Kuryer</option>
                                     </select>
+                                </div>
+
+                                <div class="employee-btn_broup">
+                                    <button>Qo'shish</button>
+                                    <span>Bekor qilish</span>
                                 </div>
                             </div>
                         </form>

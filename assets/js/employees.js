@@ -1,0 +1,1 @@
+var expiring = new Datepicker('#employee-form_input_birthdate', {});

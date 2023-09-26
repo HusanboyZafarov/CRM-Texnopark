@@ -139,3 +139,22 @@
     margin-top: 40px;
 }
 
+.employee-input_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 10px;
+}
+
+.employee-input_wrapper label {
+    color: var(--color-dark);
+}
+
+.employee-input_wrapper input,
+.employee-input_wrapper select {
+    border: 2px solid var(--color-dark-nonactive);
+    padding: 10px 20px;
+    border-radius: 10px;
+    outline: none;
+    font-size: 16px;
+}
