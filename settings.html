@@ -15,12 +15,12 @@
     <!-- Links -->
     <link rel="stylesheet" href="../assets/main-css/root.css">
     <link rel="stylesheet" href="./assets/css/main.css">
-    <link rel="stylesheet" href="./assets/css/employees.css">
+    <link rel="stylesheet" href="./assets/css/settings.css">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css">
 
 
     <link rel="stylesheet" href="./assets/lib/css/datepicker.material.css">
-    <title>Hodimlar</title>
+    <title>So'zlamalar</title>
 </head>
 
 <body>
@@ -416,13 +416,13 @@
                             Ombor
                         </a>
                     </li>
-                    <li class="header-sidebar_item active">
+                    <li class="header-sidebar_item">
                         <a href="./employees.html">
                             <i class="fa-solid fa-circle-user"></i>
                             Hodimlar
                         </a>
                     </li>
-                    <li class="header-sidebar_item">
+                    <li class="header-sidebar_item active">
                         <a href="./settings.html">
                             <i class="fas fa-gear"></i>
                             Sozlamalar
@@ -435,143 +435,50 @@
     </header>
 
     <main>
-        <div class="employees">
+        <div class="settings">
             <div class="section-wrapp">
                 <div class="container">
                     <div class="inner-wrapper">
-                        <h1 class="employees-heading">Hodimlar
-                            <p class="employees-text">
-                                Miqdor <i class="fa-solid fa-arrow-right"></i>
-                                8
-                            </p>
-                        </h1>
-
-                        <ul class="employees-list">
-                            <li class="employee-item shadowed">
-                                <p class="employee-name">Abduvali Akramov</p>
-                                <input type="hidden" name="employee-id" id="employee-id" value="1">
-                                <a href="tel: +998 99 123 45 67" class="employee-number">+998 99 123 45 67</a>
-                                <p class="employee-field">Bo‘lim boshlig‘i</p>
-                                <p class="employee-setting"><i class="fa-solid fa-ellipsis-vertical"></i></p>
-                            </li>
-                            <li class="employee-item shadowed">
-                                <p class="employee-name">Abduvali Akramov</p>
-                                <input type="hidden" name="employee-id" id="employee-id" value="2">
-                                <a href="tel: +998 99 123 45 67" class="employee-number">+998 99 123 45 67</a>
-                                <p class="employee-field">Bo‘lim boshlig‘i</p>
-                                <p class="employee-setting"><i class="fa-solid fa-ellipsis-vertical"></i></p>
-                            </li>
-                            <li class="employee-item shadowed">
-                                <p class="employee-name">Abduvali Akramov</p>
-                                <input type="hidden" name="employee-id" id="employee-id" value="3">
-                                <a href="tel: +998 99 123 45 67" class="employee-number">+998 99 123 45 67</a>
-                                <p class="employee-field">Bo‘lim boshlig‘i</p>
-                                <p class="employee-setting"><i class="fa-solid fa-ellipsis-vertical"></i></p>
-                            </li>
-                            <li class="employee-item shadowed">
-                                <p class="employee-name">Abduvali Akramov</p>
-                                <input type="hidden" name="employee-id" id="employee-id" value="4">
-                                <a href="tel: +998 99 123 45 67" class="employee-number">+998 99 123 45 67</a>
-                                <p class="employee-field">Bo‘lim boshlig‘i</p>
-                                <p class="employee-setting active"><i class="fa-solid fa-ellipsis-vertical"></i></p>
-                            </li>
-                            <li class="employee-item shadowed">
-                                <p class="employee-name">Abduvali Akramov</p>
-                                <input type="hidden" name="employee-id" id="employee-id" value="5">
-                                <a href="tel: +998 99 123 45 67" class="employee-number">+998 99 123 45 67</a>
-                                <p class="employee-field">Bo‘lim boshlig‘i</p>
-                                <p class="employee-setting"><i class="fa-solid fa-ellipsis-vertical"></i></p>
-                            </li>
-                            <li class="employee-item shadowed">
-                                <p class="employee-name">Abduvali Akramov</p>
-                                <input type="hidden" name="employee-id" id="employee-id" value="6">
-                                <a href="tel: +998 99 123 45 67" class="employee-number">+998 99 123 45 67</a>
-                                <p class="employee-field">Bo‘lim boshlig‘i</p>
-                                <p class="employee-setting"><i class="fa-solid fa-ellipsis-vertical"></i></p>
-                            </li>
-                            <li class="employee-item shadowed">
-                                <p class="employee-name">Abduvali Akramov</p>
-                                <input type="hidden" name="employee-id" id="employee-id" value="7">
-                                <a href="tel: +998 99 123 45 67" class="employee-number">+998 99 123 45 67</a>
-                                <p class="employee-field">Bo‘lim boshlig‘i</p>
-                                <p class="employee-setting"><i class="fa-solid fa-ellipsis-vertical"></i></p>
-                            </li>
-                            <li class="employee-item shadowed">
-                                <p class="employee-name">Abduvali Akramov</p>
-                                <input type="hidden" name="employee-id" id="employee-id" value="8">
-                                <a href="tel: +998 99 123 45 67" class="employee-number">+998 99 123 45 67</a>
-                                <p class="employee-field">Bo‘lim boshlig‘i</p>
-                                <p class="employee-setting"><i class="fa-solid fa-ellipsis-vertical"></i></p>
-                            </li>
-                        </ul>
-
-                        <form action="" class="employee-form">
-                            <div class="employee-heading">
-                                <h1 class="employee-header">Hodim qo'shish</h1>
-                                <span class="employee-form_closer">
-                                    <i class="fa-solid fa-xmark"></i>
-                                </span>
-                            </div>
-
-                            <div class="employee-form_inner_wrapper">
-                                <div class="employee-input_wrapper">
-                                    <label for="employee-form_input_name">Ism</label>
-                                    <input type="text" name="name" autocomplete="off" id="employee-form_input_name">
+                        <div class="settings-main_block_wrapper">
+                            <div class="settings-main_block shadowed">
+                                <div class="settings-main_img_wrapper">
+                                    <img src="https://placehold.jp/3d4070/ffffff/250x250.png" alt="">
                                 </div>
-                                <div class="employee-input_wrapper">
-                                    <label for="employee-form_input_surname">Familiya</label>
-                                    <input type="text" name="surname" autocomplete="off"
-                                        id="employee-form_input_surname">
-                                </div>
+                                <a href="#" class="settings-changer_link">
+                                    O'zgartirish <i class="fa-solid fa-pen"></i>
+                                </a>
 
-                                <input type="hidden" name="editing_employee_id" id="editing_employee_id">
-
-                                <div class="employee-input_wrapper">
-                                    <label for="employee-form_input">Tel. Raqam</label>
-                                    <div class="employee-input_inner_wrapper">
-                                        <span>+998</span>
-                                        <input type="text" name="employee-form_number" autocomplete="off"
-                                            id="employee-form_number">
+                                <p class="settings-main_text">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <div class="settings-main_text_wrapper">
+                                        <p class="setting-main_inner_text_location">
+                                            Андижанская область, город Андижан Буюк Турон 21, за автовокзалом.
+                                        </p>
+                                        <p class="setting-main_inner_text_location">
+                                            Андижанская область, город Андижан Буюк Турон 21, за автовокзалом.
+                                        </p>
                                     </div>
-                                </div>
+                                </p>
 
-                                <div class="employee-input_wrapper">
-                                    <label for="employee-form_input_birthdate">Tug‘ilgan sana</label>
-                                    <input type="text" name="birth_date" autocomplete="off"
-                                        id="employee-form_input_birthdate">
-                                </div>
-
-                                <div class="employee-input_wrapper">
-                                    <p class="employee-input_gene_title">Jinsi</p>
-                                    <div class="employee-input_radio_wrapper">
-                                        <label for="employee-form_input_erkak">
-                                            <input type="radio" name="gene" id="employee-form_input_erkak">
-                                            Erkak
-                                        </label>
-                                        <label for="employee-form_input_ayol">
-                                            <input type="radio" name="gene" id="employee-form_input_ayol">
-                                            Ayol
-                                        </label>
+                                <p class="settings-main_text">
+                                    <i class="fa-solid fa-phone"></i>
+                                    <div class="settings-main_text_wrapper">
+                                        <a href="tel: +9989012345678" class="setting-main_inner_link">
+                                            +9989012345678
+                                        </a>
+                                        <a href="tel: +9989012345678" class="setting-main_inner_link">
+                                            +9989012345678
+                                        </a>
                                     </div>
-                                </div>
-
-                                <div class="employee-input_wrapper">
-                                    <label for="employee-form_input">Bla bla bla</label>
-                                    <select name="employee-form_position" id="employee-form_position">
-                                        <option value="" selected></option>
-                                        <option value="Bo'lim bo'shligi">
-                                            Bo'lim bo'shligi
-                                        </option>
-                                        <option value="Kuryer">Kuryer</option>
-                                    </select>
-                                </div>
-
-                                <div class="employee-btn_broup">
-                                    <button>Qo'shish</button>
-                                    <span>Bekor qilish</span>
-                                </div>
+                                </p>
+                                <p class="settings-main_text">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <p class="setting-main_inner_text">
+                                        CRMmobile@gmail.com
+                                    </p>
+                                </p>
                             </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -596,6 +503,6 @@
 
 <script src="./assets/js/main.js"></script>
 <script src="./assets/lib/js/datepicker.js"></script>
-<script src="./assets/js/employees.js"></script>
+<script src="./assets/js/settings.js"></script>
 
 </html>
