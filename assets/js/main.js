@@ -114,10 +114,11 @@ notification_closer.addEventListener("click", () => {
     notification_opener.parentElement.classList.remove("changed")
 })
 
-let notification_toggler = document.querySelectorAll(".header-notification_toggler")
+let notification_toggler = document.querySelectorAll(".header-notification-info")
 notification_toggler.forEach(element => {
     element.addEventListener("click", () => {
-        element.parentElement.nextElementSibling.getBoundingClientRect().height ? element.parentElement.nextElementSibling.style.maxHeight = 0 : element.parentElement.nextElementSibling.style.maxHeight = `${element.parentElement.nextElementSibling.scrollHeight}px`
+        element.lastElementChild.classList.toggle("changed")
+        element.nextElementSibling.getBoundingClientRect().height ? element.nextElementSibling.style.maxHeight = 0 : element.nextElementSibling.style.maxHeight = `${element.nextElementSibling.scrollHeight}px`
     });
 });
 

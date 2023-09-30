@@ -506,6 +506,7 @@ header {
 
 .header-notification-info {
     padding: 10px;
+    cursor: pointer;
     position: sticky;
     top: 0;
     width: 100%;
