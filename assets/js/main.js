@@ -150,24 +150,31 @@ window.addEventListener("load", () => {
     }, 500);
 })
 
-let form_download_opener = document.querySelector(".form_download_opener")
 
-let form_download_links = document.querySelector(".form_download_links")
-if (form_download_links) {
-    form_download_opener.addEventListener("click", () => {
-        form_download_links.getBoundingClientRect().height ? form_download_links.style.maxHeight = 0 : form_download_links.style.maxHeight = `${form_download_links.scrollHeight}px`
+let filter_opener = document.querySelector(".filter_opener")
+if (filter_opener) {
+    filter_opener.addEventListener("click", () => {
+        filter_opener.parentElement.getBoundingClientRect().width == 74 ? filter_opener.parentElement.style.maxWidth = `${filter_opener.parentElement.scrollWidth}px` : filter_opener.parentElement.style.maxWidth = `74px`
+        filter_opener.parentElement.getBoundingClientRect().width == 74 ? filter_opener.classList.add("active") : filter_opener.classList.remove("active")
+    })
+    let filter_closer = document.querySelector(".filter_closer")
+    filter_closer.addEventListener("click", () => {
+        filter_opener.classList.toggle("active")
+        filter_opener.parentElement.getBoundingClientRect().width == 74 ? filter_opener.parentElement.style.maxWidth = `${filter_opener.parentElement.scrollWidth}px` : filter_opener.parentElement.style.maxWidth = `74px`
     })
 }
 
-let filter_opener = document.querySelector(".filter_opener")
-filter_opener.addEventListener("click", () => {
+let sidebar_item_span = document.querySelector(".header-sidebar_item span")
+sidebar_item_span.addEventListener("click", () => {
+    sidebar_item_span.nextElementSibling.classList.toggle("opened")
+    sidebar_item_span.nextElementSibling.classList.remove("noned")
 
-    filter_opener.parentElement.getBoundingClientRect().width == 74 ? filter_opener.parentElement.style.maxWidth = `${filter_opener.parentElement.scrollWidth + 20}px` : filter_opener.parentElement.style.maxWidth = `74px`
-    filter_opener.parentElement.getBoundingClientRect().width == 74 ? filter_opener.classList.add("active") : filter_opener.classList.remove("active")
-})
-
-let filter_closer = document.querySelector(".filter_closer")
-filter_closer.addEventListener("click", () => {
-    filter_opener.classList.toggle("active")
-    filter_opener.parentElement.getBoundingClientRect().width == 74 ? filter_opener.parentElement.style.maxWidth = `${filter_opener.parentElement.scrollWidth + 20}px` : filter_opener.parentElement.style.maxWidth = `74px`
+    if (sidebar_item_span.nextElementSibling.style.right == "-137.75px") {
+        sidebar_item_span.nextElementSibling.style.right = "0px"
+        setTimeout(() => {
+            sidebar_item_span.nextElementSibling.classList.add("noned")
+        }, 500);
+    } else {
+        sidebar_item_span.nextElementSibling.style.right = `-${sidebar_item_span.style.width + sidebar_item_span.nextElementSibling.getBoundingClientRect().width}px`
+    }
 })

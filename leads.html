@@ -377,7 +377,7 @@ Tel: +998123456789
 
             <div class="header-sidebar">
                 <ul class="header-sidebar_ul">
-                    <li class="header-sidebar_item">
+                    <li class="header-sidebar_item active">
                         <a href="./index.html">
                             <i class="fa-solid fa-house"></i>
                             Statistika
@@ -395,7 +395,7 @@ Tel: +998123456789
                             Mijozlar
                         </a>
                     </li>
-                    <li class="header-sidebar_item">
+                    <li class="header-sidebar_item moliya">
                         <span>
                             <i class="fas fa-wallet"></i>
                             Moliya
@@ -420,13 +420,13 @@ Tel: +998123456789
                         </a>
                     </li>
                     <li class="header-sidebar_item">
-                        <a href="#">
+                        <a href="./employees.html">
                             <i class="fa-solid fa-circle-user"></i>
                             Hodimlar
                         </a>
                     </li>
                     <li class="header-sidebar_item">
-                        <a href="#">
+                        <a href="./settings.html">
                             <i class="fas fa-gear"></i>
                             Sozlamalar
                         </a>
@@ -443,55 +443,41 @@ Tel: +998123456789
                 <div class="container">
                     <div class="inner-wrapper">
                         <div class="form_filter_outer">
-                            <div class="form_download_links shadowed">
-                                <a href="./assets/files/Test - Word.docx" download>
-                                    <i class="fa-solid fa-file-word"></i>
-                                    Word
-                                </a>
-
-                                <a href="./assets/files/Test - Excel.xlsx" download>
-                                    <i class="fa-solid fa-file-excel"></i>
-                                    Excel
-                                </a>
-
-                                <a href="./assets/files/Test - PDF.pptx" download>
-                                    <i class="fa-solid fa-file-pdf"></i>
-                                    PDF
-                                </a>
-                            </div>
-                            <div class="top_filter_wrapper shadowed">
-                                <div class="filter_opener shadowed">
-                                    <i class="fa-solid fa-filter"></i>
-                                </div>
-                                <form action="" class="form_filter">
-                                    <div class="form_input_wrapper shadowed">
-                                        <label for="name">
-                                            <i class="fa-solid fa-calendar-days"></i>
-                                        </label>
-                                        <select name="name" id="name">
-                                            <option value="" selected>Ism o'rqali</option>
-                                            <option value="Husanboy Zafarov">Husanboy Zafarov</option>
-                                            <option value="Husanboy Zafarov">Husanboy Zafarov</option>
-                                        </select>
+                            <div class="top_filter_outer_wrapper">
+                                <div class="top_filter_wrapper shadowed">
+                                    <div class="filter_opener shadowed">
+                                        <i class="fa-solid fa-filter"></i>
                                     </div>
-                                    <div class="form_input_wrapper shadowed">
-                                        <input type="text" name="query_s" autocomplete="off" id="query_s"
-                                            placeholder="Qidiring...">
-                                    </div>
-                                    <button type="submit" class="form_btn shadowed">Qidirish</button>
-                                    <div class="form_download_wrapper shadowed">
-                                        <span class="form_download_opener">
-                                            <i class="fa-solid fa-download"></i>
+                                    <form action="" class="form_filter">
+                                        <div class="form_input_wrapper shadowed">
+                                            <label for="name">
+                                                <i class="fa-solid fa-calendar-days"></i>
+                                            </label>
+                                            <select name="name" id="name">
+                                                <option value="" selected>Ism o'rqali</option>
+                                                <option value="Husanboy Zafarov">Husanboy Zafarov</option>
+                                                <option value="Husanboy Zafarov">Husanboy Zafarov</option>
+                                            </select>
+                                        </div>
+                                        <div class="form_input_wrapper shadowed">
+                                            <input type="text" name="query_s" autocomplete="off" id="query_s"
+                                                placeholder="Tel.O'rqali qidirish...">
+                                        </div>
+                                        <button type="submit" class="form_btn shadowed">Qidirish</button>
+                                        <div class="form_download_wrapper shadowed">
+                                            <a download href="#" class="form_download_opener">
+                                                <i class="fa-solid fa-download"></i>
+                                            </a>
+                                        </div>
+
+                                        <span class="filter_closer shadowed">
+                                            <i class="fa-solid fa-xmark"></i>
                                         </span>
-                                    </div>
-                                    <span class="adding_form_opener shadowed cat">
-                                        Kategoriya qo'shish
-                                    </span>
-                                    <span class="filter_closer shadowed">
-                                        <i class="fa-solid fa-xmark"></i>
-                                    </span>
-                                </form>
-
+                                    </form>
+                                </div>
+                                <span class="adding_form_opener shadowed cat">
+                                    <i class="fa-regular fa-circle-plus"></i> Kategoriya qo'shish
+                                </span>
                             </div>
                         </div>
                         <div class="leads-blocks_wrapper">
